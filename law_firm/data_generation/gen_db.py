@@ -600,7 +600,7 @@ def main():
         "password": os.getenv("PGPASSWORD", "1111"),
     }
     counts = {
-        "employees": args.employees,
+        "employees": 10,
         "client_person": args.persons,
         "client_entrepreneur": args.entrepreneurs,
         "client_legal": args.legals,
