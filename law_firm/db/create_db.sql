@@ -118,7 +118,7 @@ CREATE TABLE assignment_agreement (
 );
 
 
-CREATE TABLE contract_service (
+CREATE TABLE contract_service ( 
     id_service INT NOT NULL,
     assignment_agreement_no BIGINT NOT NULL,
     cooperation_agreement_no BIGINT NOT NULL,  
