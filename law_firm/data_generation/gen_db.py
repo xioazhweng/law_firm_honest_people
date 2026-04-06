@@ -277,12 +277,28 @@ class DBFiller:
 
         return employees_by_position
 
-    def insert_price_lists(self, cursor, count = 6):
-        creation_dates = chunked_dates(count)
+    def insert_price_lists(self,cursor, count=6):
+        creation_dates = chunked_dates(count) 
+        start_year = min(d.year for d in creation_dates)
+        values = []
+        for creation_date in creation_dates:
+            nds = 0.2  # 20%
+            # наценка по месяцу
+            if creation_date.month in [1, 2, 3]:
+                extra_charge = 5
+            elif creation_date.month in [4, 5, 6]:
+                extra_charge = 10
+            elif creation_date.month in [7, 8, 9]:
+                extra_charge = 15
+            else:
+                extra_charge = 20
+            inflation_rate = round(1.02 ** (creation_date.year - start_year), 4)
+            values.append((creation_date, nds, extra_charge, inflation_rate))
+
         execute_values(
             cursor,
-            "INSERT INTO price_list (creation_date) VALUES %s;",
-            [(creation_date,) for creation_date in creation_dates],
+            "INSERT INTO price_list (creation_date, nds, extra_charge, inflation_rate) VALUES %s;",
+            values,
         )
         return creation_dates
 
@@ -302,10 +318,28 @@ class DBFiller:
         return prices_by_service_id
 
     def insert_price_list_service(self, cursor, service_ids, creation_dates, prices_by_service_id):
-        rows = []
+        cursor.execute(
+            """
+            SELECT creation_date, nds, extra_charge, inflation_rate
+            FROM price_list
+            """
+        )
+        rows = cursor.fetchall()
+        
+        info = {}
+        for creation_date, nds, extra_charge, inflation_rate in rows:
+            info[creation_date] = {
+                "nds": nds,
+                "extra_charge": extra_charge,
+                "inflation_rate": inflation_rate,
+            }
+
+        rows_to_insert = []
         for service_id in service_ids:
-            base_price = prices_by_service_id[service_id]  
+            base_price = prices_by_service_id[service_id] 
             for creation_date in creation_dates:
+                base_price *= info[creation_date]["inflation_rate"]
+                base_price *= (1 + info[creation_date]["nds"])
                 for client_type in ["PERSON", "ENTREPRENEUR", "LEGAL"]:
                     if client_type == "PERSON":
                         price = base_price
@@ -313,7 +347,8 @@ class DBFiller:
                         price = int(base_price * 1.1)  # ИП +10%
                     else:  # LEGAL
                         price = int(base_price * 1.3)  # Юрлицо +30%
-                    rows.append((service_id, creation_date, client_type, price))
+                    price += info[creation_date]["extra_charge"]
+                    rows_to_insert.append((service_id, creation_date, client_type, price))
 
         execute_values(
             cursor,
@@ -322,8 +357,8 @@ class DBFiller:
             (id_service, creation_date, client_type, price) 
             VALUES %s;
             """,
-            rows,
-        )
+            rows_to_insert,
+    )
 
     def create_client(self, cursor, client_type):
         cursor.execute(
@@ -421,11 +456,17 @@ class DBFiller:
             assignment_count = random.randint(1, 3)
             for _ in range(assignment_count):
                 creation_price_list_date = random.choice(price_list_dates)
+
                 deadline = fake.date_between(start_date=start_date, end_date=date.today() + timedelta(days=120))
                 completed = random.random() < 0.7
-                created_at = fake.date_between(start_date=start_date, end_date=deadline - timedelta(days=5)) 
-                completion_date = fake.date_between(start_date=created_at + timedelta(days=1), end_date=deadline) if completed else None
-                
+                end_for_created = max(start_date, deadline - timedelta(days=5))
+                created_at = fake.date_between(start_date=start_date, end_date=end_for_created)
+                if completed:
+                    start_for_completion = min(created_at + timedelta(days=1), deadline)
+                    completion_date = fake.date_between(start_date=start_for_completion, end_date=deadline)
+                else:
+                    completion_date = None
+
                 cursor.execute(
                     """
                     INSERT INTO assignment_agreement (
@@ -456,18 +497,20 @@ class DBFiller:
                 assignment_total = 0
                 for service_id in selected_services:
                     assignment_total += service_prices[service_id]
-                    cursor.execute(
-                        """
-                        INSERT INTO contract_service (
-                            id_service,
-                            assignment_agreement_no,
-                            cooperation_agreement_no,
-                            id_client
+                    n = random.choice([1,2,3,4,5,6,7])
+                    for _ in range(n):
+                        cursor.execute(
+                            """
+                            INSERT INTO contract_service (
+                                id_service,
+                                assignment_agreement_no,
+                                cooperation_agreement_no,
+                                id_client
+                            )
+                            VALUES (%s, %s, %s, %s);
+                            """,
+                            (service_id, assignment_number, cooperation_number, client_id),
                         )
-                        VALUES (%s, %s, %s, %s);
-                        """,
-                        (service_id, assignment_number, cooperation_number, client_id),
-                    )
 
                 account_no, bik = firm_accounts[index % len(firm_accounts)]
                 payment_date = completion_date or fake.date_between(start_date=start_date, end_date=date.today())

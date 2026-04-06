@@ -69,7 +69,13 @@ CREATE TABLE employee (
 );
 
 -- 4. Услуги и прайсы
-CREATE TABLE price_list (creation_date DATE PRIMARY KEY);
+CREATE TABLE price_list (
+    creation_date DATE PRIMARY KEY,
+    nds FLOAT NOT NULL,
+    extra_charge INT NOT NULL,
+    inflation_rate FLOAT NOT NULL
+);
+
 CREATE TABLE service (
     id_service SERIAL PRIMARY KEY, 
     name_service TEXT NOT NULL UNIQUE, 
@@ -121,11 +127,12 @@ CREATE TABLE assignment_agreement (
 
 
 CREATE TABLE contract_service ( 
+    id BIGSERIAL PRIMARY KEY,
     id_service INT NOT NULL,
     assignment_agreement_no BIGINT NOT NULL,
     cooperation_agreement_no BIGINT NOT NULL,  
     id_client BIGINT NOT NULL,                 
-    PRIMARY KEY (id_service, assignment_agreement_no, cooperation_agreement_no, id_client),
+   -- PRIMARY KEY (id_service, assignment_agreement_no, cooperation_agreement_no, id_client),
     FOREIGN KEY (id_service) REFERENCES service ON DELETE CASCADE,
     FOREIGN KEY (assignment_agreement_no, cooperation_agreement_no, id_client) 
         REFERENCES assignment_agreement ON DELETE CASCADE
