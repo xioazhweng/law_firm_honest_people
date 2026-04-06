@@ -423,8 +423,9 @@ class DBFiller:
                 creation_price_list_date = random.choice(price_list_dates)
                 deadline = fake.date_between(start_date=start_date, end_date=date.today() + timedelta(days=120))
                 completed = random.random() < 0.7
-                completion_date = fake.date_between(start_date=start_date, end_date=deadline) if completed else None
-
+                created_at = fake.date_between(start_date=start_date, end_date=deadline - timedelta(days=5)) 
+                completion_date = fake.date_between(start_date=created_at + timedelta(days=1), end_date=deadline) if completed else None
+                
                 cursor.execute(
                     """
                     INSERT INTO assignment_agreement (
@@ -432,17 +433,19 @@ class DBFiller:
                         cooperation_agreement_no,
                         id_client,
                         creation_price_list_date,
+                        created_at,
                         completion_date,
                         deadline,
                         result
                     )
-                    VALUES (%s, %s, %s, %s, %s, %s, %s);
+                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s);
                     """,
                     (
                         assignment_number,
                         cooperation_number,
                         client_id,
                         creation_price_list_date,
+                        created_at,
                         completion_date,
                         deadline,
                         completed,

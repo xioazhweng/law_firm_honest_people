@@ -108,13 +108,15 @@ CREATE TABLE assignment_agreement (
     cooperation_agreement_no BIGINT NOT NULL,  
     id_client BIGINT NOT NULL,
     creation_price_list_date DATE, 
+    created_at DATE NOT NULL,
 	completion_date DATE, 
 	deadline DATE NOT NULL,
 	result BOOLEAN,
     PRIMARY KEY (assignment_agreement_no, cooperation_agreement_no, id_client),
     FOREIGN KEY (cooperation_agreement_no, id_client) REFERENCES cooperation_agreement(cooperation_agreement_no, id_client),
     FOREIGN KEY (creation_price_list_date) REFERENCES price_list(creation_date),
-    CHECK (completion_date IS NULL OR completion_date <= deadline)
+    CHECK (completion_date IS NULL OR completion_date <= deadline),
+    CHECK (created_at < completion_date)
 );
 
 
