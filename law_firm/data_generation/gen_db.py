@@ -138,6 +138,33 @@ def chunked_dates(count: int) -> list[date]:
         dates.append(date(year, month, 1))
     return sorted(set(dates))
 
+def is_holiday(d):
+    if d.weekday() >= 5:
+        return True
+    if d.month == 1 and 1 <= d.day <= 14:
+        return True
+    return False
+
+def get_previous_workday(d):
+    while(is_holiday(d)):
+        d -= timedelta(days=1)
+    return d
+
+def get_payment_dates(today):
+    advance_date = date(today.year, today.month, 25)
+    if today.month == 12:
+        salary_date = date(today.year + 1, 1, 10)
+    else:
+        salary_date = date(today.year, today.month + 1, 10)
+
+    advance_date = get_previous_workday(advance_date)
+    salary_date = get_previous_workday(salary_date)
+    return advance_date, salary_date
+
+def add_month(d):
+    if d.month == 12:
+        return date(d.year + 1, 1, 1)
+    return date(d.year, d.month + 1, 1)
 
 class DBFiller:
     def __init__(self, db_config, counts):
@@ -230,6 +257,7 @@ class DBFiller:
         return accounts
 
     def insert_employees(self, cursor, position_ids, accounts, count):
+        fake = Faker("ru_RU")
         employees_by_position: dict[str, list[int]] = {name: [] for name in JOB_POSITIONS}
         weighted_positions = ["Юрист"] * 4 + ["Менеджер"] * 3 + ["Администратор"] * 2 + ["Бухгалтер"] * 2
 
@@ -250,6 +278,7 @@ class DBFiller:
                 """
                 INSERT INTO employee (
                     employee_number,
+                    fio,
                     id_job_position,
                     account_no,
                     bik,
@@ -259,10 +288,11 @@ class DBFiller:
                     salary,
                     gender
                 )
-                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s);
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s);
                 """,
                 (
                     employee_number,
+                    fake.name(),
                     position_ids[job_name],
                     account_no,
                     bik,
@@ -456,14 +486,12 @@ class DBFiller:
             assignment_count = random.randint(1, 3)
             for _ in range(assignment_count):
                 creation_price_list_date = random.choice(price_list_dates)
-
-                deadline = fake.date_between(start_date=start_date, end_date=date.today() + timedelta(days=120))
+                created_at = fake.date_between(start_date=start_date, end_date=date.today())
+                deadline = fake.date_between(start_date=created_at + timedelta(days=1), end_date=created_at + timedelta(days=121))
                 completed = random.random() < 0.7
-                end_for_created = max(start_date, deadline - timedelta(days=5))
-                created_at = fake.date_between(start_date=start_date, end_date=end_for_created)
+                
                 if completed:
-                    start_for_completion = min(created_at + timedelta(days=1), deadline)
-                    completion_date = fake.date_between(start_date=start_for_completion, end_date=deadline)
+                    completion_date = fake.date_between(start_date=created_at, end_date=deadline)
                 else:
                     completion_date = None
 
@@ -555,25 +583,49 @@ class DBFiller:
     def insert_outgoing_payments(self, cursor):
         cursor.execute(
             """
-            SELECT employee_number, account_no, bik, salary
+            SELECT employee_number, account_no, bik, salary, hire_date, fire_date
             FROM employee
             WHERE account_no IS NOT NULL AND bik IS NOT NULL;
             """
         )
+
         rows = cursor.fetchall()
         payment_rows = []
-        for offset, (employee_number, account_no, bik, salary) in enumerate(rows, start=1):
-            payment_date = date.today().replace(day=1) + timedelta(days=offset)
-            payment_rows.append((payment_date, account_no, bik, employee_number, salary))
 
+        base_end_date = date.today()  
+
+        for employee_number, account_no, bik, salary, hire_date, fire_date in rows:
+            current = date(hire_date.year, hire_date.month, 1)
+            while current <= base_end_date and (fire_date is None or current <= fire_date):
+                advance_date, salary_date = get_payment_dates(current)
+                advance = min(15000, salary)
+                rest = max(0, salary - 15000)
+                
+                if base_end_date - current < timedelta(60):
+                    answ1, answ2 = random.choice([True,  False, False]), random.choice([True,  False, False])
+                else:
+                    answ1 = answ2 = True
+            
+                payment_rows.append(
+                    (advance_date, account_no, bik, employee_number, advance, 'ADVANCE', answ1)
+                )
+
+                if rest > 0:
+                    payment_rows.append(
+                        (salary_date, account_no, bik, employee_number, rest, 'PAYMENT', answ2)
+                    )                    
+
+                current = add_month(current)
         execute_values(
             cursor,
             """
-            INSERT INTO outgoing_pay_document (payment_date, account_no, bik, employee_number, amount)
+            INSERT INTO outgoing_pay_document 
+            (payment_date, account_no, bik, employee_number, amount, payment_type, result)
             VALUES %s;
             """,
             payment_rows,
         )
+       
 
     def run(self, apply_schema = False, truncate = True):
         self.connect()

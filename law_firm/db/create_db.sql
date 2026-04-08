@@ -56,6 +56,7 @@ CREATE TABLE job_position (
 
 CREATE TABLE employee (
     employee_number BIGINT PRIMARY KEY,
+    fio TEXT NOT NULL,
     id_job_position INT REFERENCES job_position(id_job_position) ON DELETE SET NULL,
     account_no TEXT, 
 	bik VARCHAR(9),
@@ -122,7 +123,7 @@ CREATE TABLE assignment_agreement (
     FOREIGN KEY (cooperation_agreement_no, id_client) REFERENCES cooperation_agreement(cooperation_agreement_no, id_client),
     FOREIGN KEY (creation_price_list_date) REFERENCES price_list(creation_date),
     CHECK (completion_date IS NULL OR completion_date <= deadline),
-    CHECK (created_at < completion_date)
+    CHECK (created_at <= completion_date)
 );
 
 
@@ -167,6 +168,8 @@ CREATE TABLE outgoing_pay_document (
 	bik VARCHAR(9) NOT NULL,
     employee_number BIGINT, 
 	amount BIGINT NOT NULL CHECK (amount >= 0),
+    payment_type TEXT NOT NULL CHECK (payment_type IN ('ADVANCE', 'PAYMENT')),
+    result BOOLEAN,
     PRIMARY KEY(payment_date, account_no, bik),
     FOREIGN KEY (account_no, bik) REFERENCES bank_account(account_no, bik) ON DELETE CASCADE,
     FOREIGN KEY (employee_number) REFERENCES employee(employee_number) ON DELETE SET NULL
