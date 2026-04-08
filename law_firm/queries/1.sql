@@ -111,34 +111,3 @@ LEFT JOIN popular_service ps ON ci.id_client = ps.id_client
 LEFT JOIN accounts acc ON ci.id_client = acc.id_client
 ORDER BY ci.name;
 
-
-----
-with clients_info AS (
-    SELECT 
-        c.id_client,
-        COALESCE(entr.fio, lgl.company_name, prsn.fio) AS name
-    FROM client c
-    LEFT JOIN client_entrepreneur entr ON c.id_client = entr.id_client
-    LEFT JOIN client_legal lgl ON c.id_client = lgl.id_client
-    LEFT JOIN client_person prsn ON c.id_client = prsn.id_client
-),
-services as (
-	select 
-		c.id_client, 
-		pls.price, aa.created_at, aa.assignment_agreement_no 
-	from client c
-	left join cooperation_agreement ca on c.id_client = ca.id_client 
-	left join assignment_agreement aa on aa.id_client  = ca.id_client and
-				aa.cooperation_agreement_no  = ca.cooperation_agreement_no 
-	left join contract_service cs on cs.assignment_agreement_no  = aa.assignment_agreement_no 
-	left join price_list_service pls on cs.id_service = pls.id_service and
-		 aa.creation_price_list_date = pls.creation_date
-)
-select  ci.name,
-		ci.id_client,
-		COUNT(assignment_agreement_no) as "Число договоров",
-		SUM(price) as "Сумма всех договоров", 
-		MAX(created_at) as "Дата последнего договора"	
-from services s
-join clients_info ci on ci.id_client = s.id_client
-group by ci.name, ci.id_client
