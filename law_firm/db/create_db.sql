@@ -132,7 +132,8 @@ CREATE TABLE contract_service (
     id_service INT NOT NULL,
     assignment_agreement_no BIGINT NOT NULL,
     cooperation_agreement_no BIGINT NOT NULL,  
-    id_client BIGINT NOT NULL,                 
+    id_client BIGINT NOT NULL, 
+    price BIGINT NOT NULL,                
    -- PRIMARY KEY (id_service, assignment_agreement_no, cooperation_agreement_no, id_client),
     FOREIGN KEY (id_service) REFERENCES service ON DELETE CASCADE,
     FOREIGN KEY (assignment_agreement_no, cooperation_agreement_no, id_client) 

@@ -521,9 +521,29 @@ class DBFiller:
                     ),
                 )
 
+                cursor.execute(
+                    """
+                    SELECT client_type
+                    FROM client
+                    WHERE id_client = %s;
+                    """, (client_id,)
+                )
+                client_type = cursor.fetchone()[0]
+    
                 selected_services = random.sample(service_ids, k=random.randint(1, min(3, len(service_ids))))
                 assignment_total = 0
                 for service_id in selected_services:
+                    cursor.execute(
+                            """
+                            SELECT price
+                            FROM price_list_service pls
+                            WHERE pls.client_type = %s AND
+                                pls.creation_date = %s AND
+                                pls.id_service = %s
+                        
+                            """, (client_type, creation_price_list_date, service_id)
+                        )
+                    price_service = cursor.fetchone()[0]
                     assignment_total += service_prices[service_id]
                     n = random.choice([1,2,3,4,5,6,7])
                     for _ in range(n):
@@ -533,11 +553,12 @@ class DBFiller:
                                 id_service,
                                 assignment_agreement_no,
                                 cooperation_agreement_no,
-                                id_client
+                                id_client,
+                                price
                             )
-                            VALUES (%s, %s, %s, %s);
+                            VALUES (%s, %s, %s, %s, %s);
                             """,
-                            (service_id, assignment_number, cooperation_number, client_id),
+                            (service_id, assignment_number, cooperation_number, client_id, price_service),
                         )
 
                 account_no, bik = firm_accounts[index % len(firm_accounts)]

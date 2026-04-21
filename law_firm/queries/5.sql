@@ -23,7 +23,7 @@ payments_dates as (
 ),
 last_payments as (
         SELECT opd.employee_number,
-                MAX(CASE WHEN pd.rn = 1 THEN pd.payment_date END) AS "Р/С последнего платежа"
+                MIN(CASE WHEN pd.rn = 1 THEN pd.payment_date END) AS "Р/С последнего платежа"
         FROM outgoing_pay_document opd
         LEFT JOIN payments_dates pd ON opd.employee_number = pd.employee_number
         GROUP BY opd.employee_number
