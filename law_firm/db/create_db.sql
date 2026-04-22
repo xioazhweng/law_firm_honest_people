@@ -123,9 +123,8 @@ CREATE TABLE assignment_agreement (
     FOREIGN KEY (cooperation_agreement_no, id_client) REFERENCES cooperation_agreement(cooperation_agreement_no, id_client),
     FOREIGN KEY (creation_price_list_date) REFERENCES price_list(creation_date),
     CHECK (completion_date IS NULL OR completion_date <= deadline),
-    CHECK (created_at <= completion_date)
+    CHECK (completion_date IS NULL or created_at <= completion_date)
 );
-
 
 CREATE TABLE contract_service ( 
     id BIGSERIAL PRIMARY KEY,
@@ -141,26 +140,55 @@ CREATE TABLE contract_service (
 );
 
 -- Платежи
+
+
+CREATE TABLE payment_bundle (
+    id_payment_bundle BIGSERIAL PRIMARY KEY,
+    parent_cooperation_agreement_no BIGINT NOT NULL,
+    id_client BIGINT NOT NULL,
+    total_amount BIGINT NOT NULL CHECK (total_amount >= 0),
+    created_at DATE NOT NULL,
+
+    FOREIGN KEY (parent_cooperation_agreement_no, id_client)
+        REFERENCES cooperation_agreement(cooperation_agreement_no, id_client)
+);
+
+CREATE TABLE payment_document (
+    id_payment_document BIGSERIAL PRIMARY KEY,
+    id_payment_bundle BIGINT NOT NULL,
+
+    assignment_agreement_no BIGINT NOT NULL,
+    cooperation_agreement_no BIGINT NOT NULL,
+    id_client BIGINT NOT NULL,
+
+    amount BIGINT NOT NULL CHECK (amount >= 0),
+
+    FOREIGN KEY (id_payment_bundle)
+        REFERENCES payment_bundle ON DELETE CASCADE,
+
+    FOREIGN KEY (assignment_agreement_no, cooperation_agreement_no, id_client)
+        REFERENCES assignment_agreement
+);
+
 CREATE TABLE income_pay_document (
-    payment_no BIGINT NOT NULL, account_no TEXT NOT NULL, bik VARCHAR(9) NOT NULL,
+    id_income_pay_document BIGSERIAL PRIMARY KEY,
+    account_no TEXT NOT NULL, 
+    bik VARCHAR(9) NOT NULL,
     amount BIGINT NOT NULL CHECK (amount >= 0), 
 	payment_date DATE NOT NULL,
-    PRIMARY KEY (payment_no, account_no, bik),
     FOREIGN KEY (account_no, bik) REFERENCES bank_account(account_no, bik)
 );
 
-CREATE TABLE payment_transaction (
-    id_payment_transaction BIGINT NOT NULL,
-    payment_no BIGINT NOT NULL, 
-	account_no TEXT NOT NULL, 
-	bik VARCHAR(9) NOT NULL,
-    assignment_agreement_no BIGINT NOT NULL,
-    cooperation_agreement_no BIGINT NOT NULL, 
-    id_client BIGINT NOT NULL,                 
-    PRIMARY KEY (id_payment_transaction, payment_no, account_no, bik),
-    FOREIGN KEY (payment_no, account_no, bik) REFERENCES income_pay_document,
-    FOREIGN KEY (assignment_agreement_no, cooperation_agreement_no, id_client) 
-        REFERENCES assignment_agreement ON DELETE CASCADE
+
+CREATE TABLE income_payment_bundle (
+    id_income_pay_document BIGINT PRIMARY KEY,
+    id_payment_bundle BIGINT NOT NULL UNIQUE,
+
+    FOREIGN KEY (id_income_pay_document)
+        REFERENCES income_pay_document ON DELETE CASCADE,
+
+    FOREIGN KEY (id_payment_bundle)
+        REFERENCES payment_bundle ON DELETE CASCADE
 );
 
 CREATE TABLE outgoing_pay_document (

@@ -1,5 +1,4 @@
 from __future__ import annotations
-
 import argparse
 import logging
 import os
@@ -10,11 +9,11 @@ from collections import defaultdict
 import psycopg2
 from faker import Faker
 from psycopg2.extras import execute_values
-
+logging.basicConfig(filename='test.log', filemode='w', level=logging.INFO)
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 SCHEMA_PATH = BASE_DIR / "db" / "create_db.sql"
-
+TRIGGERS_PATH = BASE_DIR / "triggers" 
 fake = Faker("ru_RU")
 
 DEFAULT_COUNTS = {
@@ -203,6 +202,10 @@ class DBFiller:
 
     def apply_schema(self, cursor):
         sql = SCHEMA_PATH.read_text(encoding="utf-8")
+        cursor.execute(sql)
+        sql = (TRIGGERS_PATH / "1.sql").read_text(encoding="utf-8")
+        cursor.execute(sql)
+        sql = (TRIGGERS_PATH / "2.sql").read_text(encoding="utf-8")
         cursor.execute(sql)
         logging.info("Схема из %s применена", SCHEMA_PATH)
 
@@ -515,57 +518,69 @@ class DBFiller:
                         completed,
                     ),
                 )
-
                 assignment_number += 1
             cooperation_number += 1
 
     def insert_contract_service(self, cursor, service_prices):
-        cursor.execute(
-                """
-                SELECT 
-                    aa.assignment_agreement_no, 
-                    aa.cooperation_agreement_no, 
-                    aa.id_client,
-                    c.client_type,
-                    aa.creation_price_list_date
-                FROM assignment_agreement aa
-                JOIN client c ON c.id_client = aa.id_client
-                """, 
-            )
+        cursor.execute("""
+            SELECT 
+                aa.assignment_agreement_no, 
+                aa.cooperation_agreement_no, 
+                aa.id_client,
+                c.client_type,
+                aa.creation_price_list_date
+            FROM assignment_agreement aa
+            JOIN client c ON c.id_client = aa.id_client
+        """)
         assignments = cursor.fetchall()
         service_ids = list(service_prices.keys())
+
         for assignment_number, cooperation_number, client_id, client_type, creation_price_list_date in assignments:
             selected_services = random.sample(service_ids, k=random.randint(1, min(3, len(service_ids))))
             for service_id in selected_services:
-                cursor.execute(
-                        """
-                        SELECT price
-                        FROM price_list_service pls
-                        WHERE pls.client_type = %s AND
-                            pls.creation_date = %s AND
-                            pls.id_service = %s
-                    
-                        """, (client_type, creation_price_list_date, service_id)
-                    )
-                price_service = cursor.fetchone()[0]
-                cursor.execute(
-                    """
-                    INSERT INTO contract_service (
-                        id_service,
-                        assignment_agreement_no,
-                        cooperation_agreement_no,
-                        id_client,
-                        price
-                    )
-                    VALUES (%s, %s, %s, %s, %s);
-                    """,
-                    (
+                cursor.execute("""
+                    SELECT price
+                    FROM price_list_service pls
+                    WHERE pls.client_type = %s AND
+                        pls.creation_date = %s AND
+                        pls.id_service = %s
+                """, (client_type, creation_price_list_date, service_id))
+                
+                result = cursor.fetchone()
+                if result:
+                    price_service = random.choice([result[0], 10000])
+                else:
+                    price_service = None  
+                
+                try:
+                    cursor.execute("""
+                        INSERT INTO contract_service (
+                            id_service,
+                            assignment_agreement_no,
+                            cooperation_agreement_no,
+                            id_client,
+                            price
+                        )
+                        VALUES (%s, %s, %s, %s, %s)
+                        RETURNING price;
+                    """, (
                         service_id, 
                         assignment_number, 
                         cooperation_number, 
                         client_id, 
-                        price_service),
-                    )
+                        price_service
+                    ))
+
+                    inserted_price = cursor.fetchone()[0]
+                   
+                    if inserted_price != price_service:
+                        logging.info(f"Trigger adjusted price for service {service_id}" +
+                            f"from {price_service} to {inserted_price}" )
+                    else:
+                        logging.info(f"Inserted service {service_id} with correct price {inserted_price}")
+                     
+                except psycopg2.errors.RaiseException as e:
+                    logging.info(f"Trigger error for service {service_id}: {e}")
 
     def insert_payments(self, cursor, firm_accounts):
         cursor.execute("""
@@ -576,9 +591,13 @@ class DBFiller:
             FROM assignment_agreement aa
         """)
         agreements = cursor.fetchall()
+
+        
         grouped = defaultdict(list)
+
         for client_id, coop_no, created_at in agreements:
             grouped[(client_id, created_at)].append(coop_no)
+
         for (client_id, created_at), coop_list in grouped.items():
             cursor.execute("""
                 INSERT INTO payment_bundle (
@@ -685,6 +704,116 @@ class DBFiller:
                 
 
 
+    def insert_payments(self, cursor, firm_accounts):
+        cursor.execute("""
+            SELECT DISTINCT
+                aa.id_client,
+                aa.cooperation_agreement_no,
+                aa.created_at
+            FROM assignment_agreement aa
+        """)
+        agreements = cursor.fetchall()
+
+        from collections import defaultdict
+        grouped = defaultdict(list)
+        for client_id, coop_no, created_at in agreements:
+            grouped[(client_id, created_at)].append(coop_no)
+
+        for (client_id, created_at), coop_list in grouped.items():
+            # Иногда вставляем неправильную сумму, чтобы триггер сработал
+            wrong_total = random.choice([True, False])
+            total_bundle_amount = 0 if wrong_total else 0  # Начальная сумма, триггер распределит правильно
+
+            cursor.execute("""
+                INSERT INTO payment_bundle (
+                    parent_cooperation_agreement_no,
+                    id_client,
+                    total_amount,
+                    created_at
+                )
+                VALUES (%s, %s, %s, %s)
+                RETURNING id_payment_bundle;
+            """, (coop_list[0], client_id, total_bundle_amount, created_at))
+            bundle_id = cursor.fetchone()[0]
+
+            logging.info(f"\nCreated payment bundle {bundle_id} for client {client_id} (wrong_total={wrong_total})")
+
+            for coop_no in coop_list:
+                cursor.execute("""
+                    SELECT assignment_agreement_no
+                    FROM assignment_agreement
+                    WHERE cooperation_agreement_no = %s
+                    AND id_client = %s
+                    AND created_at = %s
+                """, (coop_no, client_id, created_at))
+                assignments = cursor.fetchall()
+
+                for (assignment_no,) in assignments:
+                    cursor.execute("""
+                        SELECT COALESCE(SUM(price), 0)
+                        FROM contract_service
+                        WHERE assignment_agreement_no = %s
+                        AND cooperation_agreement_no = %s
+                        AND id_client = %s
+                    """, (assignment_no, coop_no, client_id))
+                    amount = cursor.fetchone()[0]
+
+                    total_bundle_amount += amount
+                    if wrong_total:
+                        total_bundle_amount = random.randint(0, 1504050)
+        
+                    cursor.execute("""
+                        INSERT INTO payment_document (
+                            id_payment_bundle,
+                            assignment_agreement_no,
+                            cooperation_agreement_no,
+                            id_client,
+                            amount
+                        )
+                        VALUES (%s, %s, %s, %s, %s)
+                        RETURNING id_payment_document;
+                    """, (bundle_id, assignment_no, coop_no, client_id, amount))
+                    doc_id = cursor.fetchone()[0]
+                    logging.info(f"Inserted payment document {doc_id} amount={amount}")
+
+            cursor.execute("""
+                UPDATE payment_bundle
+                SET total_amount = %s
+                WHERE id_payment_bundle = %s
+            """, (total_bundle_amount, bundle_id))
+
+            cursor.execute("SELECT bik FROM bank ORDER BY RANDOM() LIMIT 1")
+            bik = cursor.fetchone()[0]
+            account_no = "".join(random.choices("0123456789", k=20))
+            cursor.execute("""
+                INSERT INTO bank_account (account_no, bik)
+                VALUES (%s, %s)
+                ON CONFLICT DO NOTHING;
+            """, (account_no, bik))
+
+            payment_date = created_at + timedelta(days=random.randint(10, 15))
+            cursor.execute("""
+                INSERT INTO income_pay_document (
+                    account_no,
+                    bik,
+                    amount,
+                    payment_date
+                )
+                VALUES (%s, %s, %s, %s)
+                RETURNING id_income_pay_document;
+            """, (account_no, bik, total_bundle_amount, payment_date))
+            income_id = cursor.fetchone()[0]
+
+            cursor.execute("""
+                INSERT INTO income_payment_bundle (
+                    id_income_pay_document,
+                    id_payment_bundle
+                )
+                VALUES (%s, %s);
+            """, (income_id, bundle_id))
+
+            logging.info(f"Inserted income payment document {income_id} total_amount={total_bundle_amount}")
+
     def insert_outgoing_payments(self, cursor):
         cursor.execute(
             """
@@ -731,7 +860,6 @@ class DBFiller:
             payment_rows,
         )
        
-
     def run(self, apply_schema = False, truncate = True):
         self.connect()
         try:

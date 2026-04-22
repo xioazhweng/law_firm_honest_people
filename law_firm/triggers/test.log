@@ -1,0 +1,1511 @@
+INFO:root:Подключение к БД выполнено
+INFO:root:Схема из /home/you/Documents/Actual/БД/law_firm_honest_people/law_firm/db/create_db.sql применена
+INFO:root:Таблицы очищены
+INFO:root:Inserted service 2 with correct price 23420
+INFO:root:Trigger adjusted price for service 5from 10000 to 54620
+INFO:root:Trigger adjusted price for service 3from 10000 to 78020
+INFO:root:Inserted service 6 with correct price 28646
+INFO:root:Inserted service 4 with correct price 39785
+INFO:root:Trigger adjusted price for service 5from 10000 to 55697
+INFO:root:Trigger adjusted price for service 4from 10000 to 39785
+INFO:root:Trigger adjusted price for service 5from 10000 to 55697
+INFO:root:Trigger adjusted price for service 4from 10000 to 39790
+INFO:root:Trigger adjusted price for service 2from 10000 to 23878
+INFO:root:Inserted service 3 with correct price 79570
+INFO:root:Inserted service 6 with correct price 28651
+INFO:root:Inserted service 5 with correct price 55702
+INFO:root:Trigger adjusted price for service 4from 10000 to 39785
+INFO:root:Trigger adjusted price for service 1from 10000 to 7961
+INFO:root:Inserted service 6 with correct price 28646
+INFO:root:Inserted service 6 with correct price 28100
+INFO:root:Inserted service 1 with correct price 7820
+INFO:root:Inserted service 3 with correct price 79565
+INFO:root:Inserted service 5 with correct price 55697
+INFO:root:Inserted service 6 with correct price 28646
+INFO:root:Trigger adjusted price for service 1from 10000 to 7820
+INFO:root:Inserted service 3 with correct price 78020
+INFO:root:Inserted service 4 with correct price 39020
+INFO:root:Inserted service 1 with correct price 7961
+INFO:root:Inserted service 2 with correct price 23878
+INFO:root:Inserted service 2 with correct price 23420
+INFO:root:Trigger adjusted price for service 1from 10000 to 7820
+INFO:root:Inserted service 4 with correct price 39020
+INFO:root:Inserted service 3 with correct price 79570
+INFO:root:Trigger adjusted price for service 4from 10000 to 39790
+INFO:root:Trigger adjusted price for service 2from 10000 to 23878
+INFO:root:Inserted service 4 with correct price 39785
+INFO:root:Inserted service 2 with correct price 23873
+INFO:root:Trigger adjusted price for service 1from 10000 to 7820
+INFO:root:Inserted service 4 with correct price 39020
+INFO:root:Inserted service 2 with correct price 23420
+INFO:root:Trigger adjusted price for service 6from 10000 to 28646
+INFO:root:Inserted service 3 with correct price 79570
+INFO:root:Inserted service 6 with correct price 28651
+INFO:root:Trigger adjusted price for service 5from 10000 to 55697
+INFO:root:Trigger adjusted price for service 3from 10000 to 79565
+INFO:root:Inserted service 2 with correct price 23873
+INFO:root:Inserted service 3 with correct price 79565
+INFO:root:Trigger adjusted price for service 2from 10000 to 23878
+INFO:root:Inserted service 1 with correct price 7966
+INFO:root:Inserted service 4 with correct price 39790
+INFO:root:Inserted service 6 with correct price 28646
+INFO:root:Inserted service 3 with correct price 79570
+INFO:root:Trigger adjusted price for service 5from 10000 to 55702
+INFO:root:Inserted service 4 with correct price 39790
+INFO:root:Inserted service 2 with correct price 23878
+INFO:root:Inserted service 4 with correct price 39020
+INFO:root:Inserted service 5 with correct price 54620
+INFO:root:Trigger adjusted price for service 3from 10000 to 78020
+INFO:root:Trigger adjusted price for service 3from 10000 to 79570
+INFO:root:Trigger adjusted price for service 4from 10000 to 39790
+INFO:root:Inserted service 1 with correct price 7820
+INFO:root:Trigger adjusted price for service 4from 10000 to 39020
+INFO:root:Inserted service 1 with correct price 7966
+INFO:root:Trigger adjusted price for service 2from 10000 to 23873
+INFO:root:Inserted service 1 with correct price 7961
+INFO:root:Inserted service 5 with correct price 54620
+INFO:root:Trigger adjusted price for service 3from 10000 to 78020
+INFO:root:Inserted service 3 with correct price 78020
+INFO:root:Inserted service 2 with correct price 23420
+INFO:root:Inserted service 4 with correct price 39020
+INFO:root:Inserted service 6 with correct price 28646
+INFO:root:Trigger adjusted price for service 3from 10000 to 79565
+INFO:root:Inserted service 4 with correct price 39785
+INFO:root:Trigger adjusted price for service 4from 10000 to 39020
+INFO:root:Inserted service 3 with correct price 78020
+INFO:root:Trigger adjusted price for service 5from 10000 to 55702
+INFO:root:Inserted service 1 with correct price 7961
+INFO:root:Trigger adjusted price for service 5from 10000 to 55697
+INFO:root:Trigger adjusted price for service 5from 10000 to 54620
+INFO:root:Inserted service 2 with correct price 23420
+INFO:root:Inserted service 3 with correct price 78020
+INFO:root:Trigger adjusted price for service 2from 10000 to 23873
+INFO:root:Trigger adjusted price for service 3from 10000 to 79565
+INFO:root:Inserted service 1 with correct price 7961
+INFO:root:Inserted service 3 with correct price 79565
+INFO:root:Inserted service 4 with correct price 39785
+INFO:root:Trigger adjusted price for service 3from 10000 to 79565
+INFO:root:Trigger adjusted price for service 2from 10000 to 23873
+INFO:root:Trigger adjusted price for service 1from 10000 to 7961
+INFO:root:Inserted service 1 with correct price 7961
+INFO:root:Inserted service 5 with correct price 55697
+INFO:root:Inserted service 6 with correct price 28646
+INFO:root:Trigger adjusted price for service 3from 10000 to 79565
+INFO:root:Inserted service 5 with correct price 55697
+INFO:root:Trigger adjusted price for service 6from 10000 to 28651
+INFO:root:Inserted service 4 with correct price 39790
+INFO:root:Trigger adjusted price for service 3from 10000 to 79570
+INFO:root:Trigger adjusted price for service 5from 10000 to 55697
+INFO:root:Trigger adjusted price for service 1from 10000 to 7961
+INFO:root:Inserted service 5 with correct price 55697
+INFO:root:Trigger adjusted price for service 4from 10000 to 39785
+INFO:root:Inserted service 4 with correct price 39785
+INFO:root:Trigger adjusted price for service 3from 10000 to 79565
+INFO:root:Trigger adjusted price for service 5from 10000 to 55697
+INFO:root:Trigger adjusted price for service 1from 10000 to 7961
+INFO:root:Trigger adjusted price for service 1from 10000 to 7961
+INFO:root:Inserted service 1 with correct price 7820
+INFO:root:Inserted service 6 with correct price 28100
+INFO:root:Inserted service 4 with correct price 39790
+INFO:root:Trigger adjusted price for service 5from 10000 to 55702
+INFO:root:Trigger adjusted price for service 6from 10000 to 28651
+INFO:root:Inserted service 2 with correct price 23873
+INFO:root:Inserted service 1 with correct price 7961
+INFO:root:Trigger adjusted price for service 1from 10000 to 7961
+INFO:root:Trigger adjusted price for service 1from 10000 to 7820
+INFO:root:Inserted service 4 with correct price 39020
+INFO:root:Inserted service 4 with correct price 39785
+INFO:root:Inserted service 6 with correct price 28646
+INFO:root:Inserted service 1 with correct price 7961
+INFO:root:Trigger adjusted price for service 6from 10000 to 28646
+INFO:root:Inserted service 1 with correct price 7961
+INFO:root:Inserted service 4 with correct price 39785
+INFO:root:Inserted service 3 with correct price 78020
+INFO:root:Inserted service 1 with correct price 7820
+INFO:root:Trigger adjusted price for service 5from 10000 to 54620
+INFO:root:Trigger adjusted price for service 3from 10000 to 79565
+INFO:root:Inserted service 1 with correct price 7820
+INFO:root:Inserted service 6 with correct price 28100
+INFO:root:Trigger adjusted price for service 2from 10000 to 23420
+INFO:root:Trigger adjusted price for service 1from 10000 to 7820
+INFO:root:Inserted service 4 with correct price 39020
+INFO:root:Inserted service 2 with correct price 23873
+INFO:root:Trigger adjusted price for service 5from 10000 to 55697
+INFO:root:Inserted service 4 with correct price 39020
+INFO:root:Trigger adjusted price for service 6from 10000 to 28646
+INFO:root:Trigger adjusted price for service 3from 10000 to 79565
+INFO:root:Inserted service 5 with correct price 55697
+INFO:root:Inserted service 3 with correct price 79565
+INFO:root:Inserted service 5 with correct price 55702
+INFO:root:Trigger adjusted price for service 6from 10000 to 28646
+INFO:root:Inserted service 1 with correct price 7961
+INFO:root:Trigger adjusted price for service 2from 10000 to 23420
+INFO:root:Inserted service 5 with correct price 54620
+INFO:root:Trigger adjusted price for service 4from 10000 to 39020
+INFO:root:Trigger adjusted price for service 1from 10000 to 7961
+INFO:root:Inserted service 6 with correct price 28646
+INFO:root:Trigger adjusted price for service 4from 10000 to 39785
+INFO:root:Inserted service 4 with correct price 39020
+INFO:root:Trigger adjusted price for service 6from 10000 to 28100
+INFO:root:Trigger adjusted price for service 1from 10000 to 7820
+INFO:root:Trigger adjusted price for service 4from 10000 to 39020
+INFO:root:Trigger adjusted price for service 5from 10000 to 54620
+INFO:root:Inserted service 5 with correct price 54620
+INFO:root:Trigger adjusted price for service 5from 10000 to 55697
+INFO:root:Inserted service 6 with correct price 28646
+INFO:root:Trigger adjusted price for service 1from 10000 to 7961
+INFO:root:Inserted service 6 with correct price 28646
+INFO:root:Trigger adjusted price for service 5from 10000 to 55697
+INFO:root:Trigger adjusted price for service 3from 10000 to 79565
+INFO:root:Inserted service 5 with correct price 55697
+INFO:root:Inserted service 5 with correct price 55702
+INFO:root:Inserted service 2 with correct price 23878
+INFO:root:Trigger adjusted price for service 2from 10000 to 23420
+INFO:root:Trigger adjusted price for service 5from 10000 to 55702
+INFO:root:Trigger adjusted price for service 3from 10000 to 79570
+INFO:root:Inserted service 1 with correct price 7966
+INFO:root:Inserted service 4 with correct price 39020
+INFO:root:Inserted service 2 with correct price 23420
+INFO:root:Inserted service 2 with correct price 23420
+INFO:root:Inserted service 1 with correct price 7820
+INFO:root:Inserted service 3 with correct price 78020
+INFO:root:Trigger adjusted price for service 2from 10000 to 23873
+INFO:root:Trigger adjusted price for service 6from 10000 to 28646
+INFO:root:Trigger adjusted price for service 6from 10000 to 28651
+INFO:root:Inserted service 3 with correct price 78020
+INFO:root:Trigger adjusted price for service 6from 10000 to 28100
+INFO:root:Trigger adjusted price for service 2from 10000 to 23420
+INFO:root:Trigger adjusted price for service 4from 10000 to 39020
+INFO:root:Inserted service 2 with correct price 23420
+INFO:root:Trigger adjusted price for service 6from 10000 to 28646
+INFO:root:Trigger adjusted price for service 4from 10000 to 39785
+INFO:root:Inserted service 5 with correct price 55697
+INFO:root:Inserted service 2 with correct price 23873
+INFO:root:Trigger adjusted price for service 3from 10000 to 79570
+INFO:root:Inserted service 2 with correct price 23878
+INFO:root:Trigger adjusted price for service 1from 10000 to 7966
+INFO:root:Inserted service 3 with correct price 79565
+INFO:root:Trigger adjusted price for service 6from 10000 to 28646
+INFO:root:Inserted service 4 with correct price 39785
+INFO:root:Trigger adjusted price for service 4from 10000 to 39020
+INFO:root:Inserted service 2 with correct price 23420
+INFO:root:Trigger adjusted price for service 5from 10000 to 54620
+INFO:root:Inserted service 6 with correct price 28100
+INFO:root:Trigger adjusted price for service 5from 10000 to 55697
+INFO:root:Trigger adjusted price for service 5from 10000 to 55697
+INFO:root:Trigger adjusted price for service 3from 10000 to 79565
+INFO:root:Inserted service 1 with correct price 7961
+INFO:root:Inserted service 2 with correct price 23873
+INFO:root:Inserted service 5 with correct price 55697
+INFO:root:Trigger adjusted price for service 1from 10000 to 7966
+INFO:root:Inserted service 2 with correct price 23878
+INFO:root:Inserted service 1 with correct price 7961
+INFO:root:Inserted service 4 with correct price 39785
+INFO:root:Trigger adjusted price for service 6from 10000 to 28646
+INFO:root:Trigger adjusted price for service 2from 10000 to 23873
+INFO:root:Inserted service 5 with correct price 55697
+INFO:root:Inserted service 3 with correct price 79565
+INFO:root:Inserted service 6 with correct price 28651
+INFO:root:Inserted service 2 with correct price 23878
+INFO:root:Trigger adjusted price for service 2from 10000 to 23420
+INFO:root:Trigger adjusted price for service 3from 10000 to 78020
+INFO:root:Trigger adjusted price for service 6from 10000 to 28100
+INFO:root:Inserted service 3 with correct price 78020
+INFO:root:Inserted service 3 with correct price 78020
+INFO:root:Trigger adjusted price for service 2from 10000 to 23420
+INFO:root:Inserted service 6 with correct price 28100
+INFO:root:Trigger adjusted price for service 1from 10000 to 7820
+INFO:root:Trigger adjusted price for service 6from 10000 to 28100
+INFO:root:Trigger adjusted price for service 5from 10000 to 54620
+INFO:root:Inserted service 6 with correct price 28100
+INFO:root:Inserted service 3 with correct price 78020
+INFO:root:Inserted service 5 with correct price 54620
+INFO:root:Inserted service 6 with correct price 28100
+INFO:root:Trigger adjusted price for service 1from 10000 to 7820
+INFO:root:Trigger adjusted price for service 6from 10000 to 28100
+INFO:root:Trigger adjusted price for service 3from 10000 to 79565
+INFO:root:Inserted service 4 with correct price 39785
+INFO:root:Inserted service 6 with correct price 28646
+INFO:root:Trigger adjusted price for service 1from 10000 to 7961
+INFO:root:Inserted service 5 with correct price 54620
+INFO:root:Inserted service 4 with correct price 39020
+INFO:root:Inserted service 4 with correct price 39020
+INFO:root:Trigger adjusted price for service 2from 10000 to 23420
+INFO:root:Trigger adjusted price for service 3from 10000 to 79570
+INFO:root:Inserted service 5 with correct price 55702
+INFO:root:Inserted service 1 with correct price 7966
+INFO:root:Inserted service 3 with correct price 79565
+INFO:root:Trigger adjusted price for service 4from 10000 to 39785
+INFO:root:Inserted service 2 with correct price 23873
+INFO:root:Inserted service 4 with correct price 39785
+INFO:root:Inserted service 2 with correct price 23873
+INFO:root:Trigger adjusted price for service 4from 10000 to 39785
+INFO:root:Inserted service 4 with correct price 39785
+INFO:root:Trigger adjusted price for service 1from 10000 to 7961
+INFO:root:Inserted service 6 with correct price 28100
+INFO:root:Trigger adjusted price for service 1from 10000 to 7820
+INFO:root:Inserted service 1 with correct price 7961
+INFO:root:Inserted service 6 with correct price 28646
+INFO:root:Trigger adjusted price for service 2from 10000 to 23873
+INFO:root:Inserted service 5 with correct price 55697
+INFO:root:Trigger adjusted price for service 2from 10000 to 23873
+INFO:root:Trigger adjusted price for service 1from 10000 to 7961
+INFO:root:Trigger adjusted price for service 4from 10000 to 39790
+INFO:root:Trigger adjusted price for service 6from 10000 to 28100
+INFO:root:Trigger adjusted price for service 2from 10000 to 23420
+INFO:root:Inserted service 6 with correct price 28651
+INFO:root:Trigger adjusted price for service 2from 10000 to 23873
+INFO:root:Trigger adjusted price for service 6from 10000 to 28646
+INFO:root:Inserted service 3 with correct price 79565
+INFO:root:Trigger adjusted price for service 1from 10000 to 7961
+INFO:root:Inserted service 5 with correct price 55697
+INFO:root:Inserted service 6 with correct price 28646
+INFO:root:Trigger adjusted price for service 2from 10000 to 23873
+INFO:root:Trigger adjusted price for service 6from 10000 to 28646
+INFO:root:Trigger adjusted price for service 2from 10000 to 25782
+INFO:root:Inserted service 3 with correct price 85842
+INFO:root:Trigger adjusted price for service 5from 10000 to 61271
+INFO:root:Inserted service 6 with correct price 31515
+INFO:root:Inserted service 1 with correct price 8762
+INFO:root:Trigger adjusted price for service 2from 10000 to 26265
+INFO:root:Trigger adjusted price for service 5from 10000 to 61271
+INFO:root:Inserted service 1 with correct price 8762
+INFO:root:Trigger adjusted price for service 6from 10000 to 31515
+INFO:root:Inserted service 2 with correct price 26265
+INFO:root:Inserted service 5 with correct price 61271
+INFO:root:Inserted service 3 with correct price 85842
+INFO:root:Trigger adjusted price for service 5from 10000 to 60102
+INFO:root:Inserted service 2 with correct price 25782
+INFO:root:Inserted service 5 with correct price 60102
+INFO:root:Inserted service 3 with correct price 85842
+INFO:root:Trigger adjusted price for service 4from 10000 to 42942
+INFO:root:Trigger adjusted price for service 3from 10000 to 87526
+INFO:root:Inserted service 5 with correct price 61282
+INFO:root:Inserted service 3 with correct price 87526
+INFO:root:Inserted service 5 with correct price 61271
+INFO:root:Inserted service 6 with correct price 31515
+INFO:root:Inserted service 5 with correct price 60102
+INFO:root:Inserted service 3 with correct price 85842
+INFO:root:Inserted service 3 with correct price 85842
+INFO:root:Inserted service 5 with correct price 60102
+INFO:root:Inserted service 2 with correct price 25782
+INFO:root:Trigger adjusted price for service 1from 10000 to 8622
+INFO:root:Trigger adjusted price for service 4from 10000 to 42942
+INFO:root:Trigger adjusted price for service 2from 10000 to 25782
+INFO:root:Trigger adjusted price for service 4from 10000 to 42942
+INFO:root:Inserted service 3 with correct price 85842
+INFO:root:Inserted service 3 with correct price 87526
+INFO:root:Trigger adjusted price for service 5from 10000 to 61271
+INFO:root:Inserted service 6 with correct price 31515
+INFO:root:Trigger adjusted price for service 6from 10000 to 31526
+INFO:root:Inserted service 2 with correct price 26265
+INFO:root:Trigger adjusted price for service 4from 10000 to 42942
+INFO:root:Trigger adjusted price for service 3from 10000 to 87526
+INFO:root:Trigger adjusted price for service 1from 10000 to 8762
+INFO:root:Inserted service 6 with correct price 31515
+INFO:root:Inserted service 4 with correct price 43768
+INFO:root:Inserted service 6 with correct price 30930
+INFO:root:Inserted service 1 with correct price 8622
+INFO:root:Trigger adjusted price for service 4from 10000 to 42942
+INFO:root:Trigger adjusted price for service 4from 10000 to 43779
+INFO:root:Trigger adjusted price for service 3from 10000 to 85842
+INFO:root:Inserted service 3 with correct price 85842
+INFO:root:Inserted service 1 with correct price 8622
+INFO:root:Inserted service 2 with correct price 25782
+INFO:root:Inserted service 5 with correct price 61271
+INFO:root:Inserted service 2 with correct price 26265
+INFO:root:Trigger adjusted price for service 5from 10000 to 61282
+INFO:root:Trigger adjusted price for service 6from 10000 to 31526
+INFO:root:Inserted service 2 with correct price 26275
+INFO:root:Inserted service 1 with correct price 8762
+INFO:root:Trigger adjusted price for service 3from 10000 to 87526
+INFO:root:Trigger adjusted price for service 5from 10000 to 61271
+INFO:root:Trigger adjusted price for service 4from 10000 to 43768
+INFO:root:Inserted service 6 with correct price 31515
+INFO:root:Inserted service 2 with correct price 26265
+INFO:root:Inserted service 5 with correct price 61271
+INFO:root:Trigger adjusted price for service 3from 10000 to 87537
+INFO:root:Trigger adjusted price for service 3from 10000 to 87526
+INFO:root:Inserted service 5 with correct price 61282
+INFO:root:Trigger adjusted price for service 6from 10000 to 30930
+INFO:root:Inserted service 3 with correct price 85842
+INFO:root:Inserted service 4 with correct price 43779
+INFO:root:Trigger adjusted price for service 1from 10000 to 8622
+INFO:root:Trigger adjusted price for service 2from 10000 to 25782
+INFO:root:Trigger adjusted price for service 2from 10000 to 26275
+INFO:root:Trigger adjusted price for service 2from 10000 to 26265
+INFO:root:Inserted service 6 with correct price 31515
+INFO:root:Trigger adjusted price for service 4from 10000 to 43768
+INFO:root:Inserted service 6 with correct price 31515
+INFO:root:Inserted service 2 with correct price 26265
+INFO:root:Trigger adjusted price for service 1from 10000 to 8762
+INFO:root:Inserted service 3 with correct price 87526
+INFO:root:Trigger adjusted price for service 6from 10000 to 31515
+INFO:root:Inserted service 5 with correct price 61271
+INFO:root:Inserted service 3 with correct price 85842
+INFO:root:Trigger adjusted price for service 4from 10000 to 42942
+INFO:root:Inserted service 1 with correct price 8762
+INFO:root:Inserted service 5 with correct price 61271
+INFO:root:Trigger adjusted price for service 6from 10000 to 30930
+INFO:root:Trigger adjusted price for service 4from 10000 to 42942
+INFO:root:Trigger adjusted price for service 5from 10000 to 60102
+INFO:root:Trigger adjusted price for service 6from 10000 to 30930
+INFO:root:Trigger adjusted price for service 5from 10000 to 60102
+INFO:root:Inserted service 3 with correct price 85842
+INFO:root:Inserted service 1 with correct price 8622
+INFO:root:Inserted service 2 with correct price 25782
+INFO:root:Trigger adjusted price for service 6from 10000 to 30930
+INFO:root:Inserted service 1 with correct price 8622
+INFO:root:Trigger adjusted price for service 4from 10000 to 43768
+INFO:root:Inserted service 6 with correct price 30930
+INFO:root:Inserted service 2 with correct price 26275
+INFO:root:Trigger adjusted price for service 3from 10000 to 87526
+INFO:root:Inserted service 5 with correct price 61271
+INFO:root:Trigger adjusted price for service 4from 10000 to 43768
+INFO:root:Inserted service 4 with correct price 43768
+INFO:root:Trigger adjusted price for service 5from 10000 to 61271
+INFO:root:Inserted service 6 with correct price 31515
+INFO:root:Inserted service 6 with correct price 31515
+INFO:root:Trigger adjusted price for service 3from 10000 to 87526
+INFO:root:Trigger adjusted price for service 5from 10000 to 61271
+INFO:root:Trigger adjusted price for service 6from 10000 to 31515
+INFO:root:Inserted service 5 with correct price 61282
+INFO:root:Inserted service 3 with correct price 85842
+INFO:root:Trigger adjusted price for service 6from 10000 to 31526
+INFO:root:Inserted service 1 with correct price 8772
+INFO:root:Inserted service 5 with correct price 61282
+INFO:root:Trigger adjusted price for service 5from 10000 to 61271
+INFO:root:Inserted service 6 with correct price 31515
+INFO:root:Inserted service 3 with correct price 87526
+INFO:root:Inserted service 5 with correct price 60102
+INFO:root:Inserted service 4 with correct price 42942
+INFO:root:Trigger adjusted price for service 5from 10000 to 61271
+INFO:root:Inserted service 5 with correct price 79676
+INFO:root:Inserted service 1 with correct price 11413
+INFO:root:Trigger adjusted price for service 3from 10000 to 113808
+INFO:root:Trigger adjusted price for service 3from 10000 to 113808
+INFO:root:Inserted service 1 with correct price 11413
+INFO:root:Trigger adjusted price for service 6from 10000 to 40993
+INFO:root:Inserted service 3 with correct price 113808
+INFO:root:Trigger adjusted price for service 4from 10000 to 56922
+INFO:root:Inserted service 2 with correct price 34167
+INFO:root:Trigger adjusted price for service 1from 10000 to 11395
+INFO:root:Trigger adjusted price for service 2from 10000 to 34149
+INFO:root:Trigger adjusted price for service 2from 10000 to 34149
+INFO:root:Inserted service 2 with correct price 34167
+INFO:root:Trigger adjusted price for service 2from 10000 to 34149
+INFO:root:Trigger adjusted price for service 6from 10000 to 40974
+INFO:root:Inserted service 1 with correct price 11395
+INFO:root:Trigger adjusted price for service 2from 10000 to 33536
+INFO:root:Trigger adjusted price for service 1from 10000 to 11228
+INFO:root:Trigger adjusted price for service 5from 10000 to 78152
+INFO:root:Inserted service 4 with correct price 56903
+INFO:root:Inserted service 1 with correct price 11228
+INFO:root:Trigger adjusted price for service 1from 10000 to 11395
+INFO:root:Trigger adjusted price for service 1from 10000 to 11413
+INFO:root:Trigger adjusted price for service 2from 10000 to 34167
+INFO:root:Trigger adjusted price for service 6from 10000 to 40993
+INFO:root:Trigger adjusted price for service 2from 10000 to 34167
+INFO:root:Trigger adjusted price for service 2from 10000 to 34167
+INFO:root:Inserted service 6 with correct price 40993
+INFO:root:Trigger adjusted price for service 3from 10000 to 113788
+INFO:root:Trigger adjusted price for service 2from 10000 to 34149
+INFO:root:Trigger adjusted price for service 4from 10000 to 56903
+INFO:root:Trigger adjusted price for service 3from 10000 to 113788
+INFO:root:Trigger adjusted price for service 5from 10000 to 79657
+INFO:root:Trigger adjusted price for service 2from 10000 to 34149
+INFO:root:Trigger adjusted price for service 3from 10000 to 113788
+INFO:root:Trigger adjusted price for service 1from 10000 to 11395
+INFO:root:Trigger adjusted price for service 4from 10000 to 56903
+INFO:root:Inserted service 3 with correct price 111614
+INFO:root:Trigger adjusted price for service 5from 10000 to 78152
+INFO:root:Trigger adjusted price for service 6from 10000 to 40229
+INFO:root:Inserted service 5 with correct price 79657
+INFO:root:Inserted service 6 with correct price 40229
+INFO:root:Inserted service 1 with correct price 11228
+INFO:root:Inserted service 5 with correct price 79657
+INFO:root:Trigger adjusted price for service 3from 10000 to 113788
+INFO:root:Inserted service 5 with correct price 78152
+INFO:root:Trigger adjusted price for service 2from 10000 to 33536
+INFO:root:Inserted service 4 with correct price 55844
+INFO:root:Trigger adjusted price for service 5from 10000 to 79657
+INFO:root:Trigger adjusted price for service 2from 10000 to 34149
+INFO:root:Trigger adjusted price for service 1from 10000 to 11413
+INFO:root:Trigger adjusted price for service 5from 10000 to 79676
+INFO:root:Trigger adjusted price for service 3from 10000 to 113808
+INFO:root:Trigger adjusted price for service 6from 10000 to 40974
+INFO:root:Trigger adjusted price for service 2from 10000 to 34149
+INFO:root:Trigger adjusted price for service 3from 10000 to 113788
+INFO:root:Trigger adjusted price for service 6from 10000 to 40974
+INFO:root:Trigger adjusted price for service 5from 10000 to 79657
+INFO:root:Inserted service 3 with correct price 113788
+INFO:root:Inserted service 2 with correct price 33536
+INFO:root:Inserted service 6 with correct price 40974
+INFO:root:Inserted service 3 with correct price 113788
+INFO:root:Inserted service 1 with correct price 11395
+INFO:root:Inserted service 6 with correct price 40974
+INFO:root:Trigger adjusted price for service 4from 10000 to 56903
+INFO:root:Inserted service 5 with correct price 79657
+INFO:root:Trigger adjusted price for service 1from 10000 to 11395
+INFO:root:Inserted service 5 with correct price 79676
+INFO:root:Inserted service 6 with correct price 40993
+INFO:root:Inserted service 5 with correct price 79657
+INFO:root:Inserted service 1 with correct price 11228
+INFO:root:Inserted service 4 with correct price 55844
+INFO:root:Inserted service 5 with correct price 78152
+INFO:root:Trigger adjusted price for service 5from 10000 to 78152
+INFO:root:Inserted service 2 with correct price 33536
+INFO:root:Trigger adjusted price for service 1from 10000 to 11228
+INFO:root:Inserted service 3 with correct price 113808
+INFO:root:Trigger adjusted price for service 4from 10000 to 56922
+INFO:root:Trigger adjusted price for service 6from 10000 to 40974
+INFO:root:Trigger adjusted price for service 4from 10000 to 55844
+INFO:root:Inserted service 1 with correct price 11228
+INFO:root:Inserted service 2 with correct price 33536
+INFO:root:Inserted service 4 with correct price 55844
+INFO:root:Trigger adjusted price for service 5from 10000 to 78152
+INFO:root:Inserted service 6 with correct price 40229
+INFO:root:Trigger adjusted price for service 3from 10000 to 113788
+INFO:root:Trigger adjusted price for service 4from 10000 to 56922
+INFO:root:Inserted service 5 with correct price 78152
+INFO:root:Trigger adjusted price for service 6from 10000 to 40229
+INFO:root:Inserted service 1 with correct price 11228
+INFO:root:Inserted service 4 with correct price 56903
+INFO:root:Trigger adjusted price for service 3from 10000 to 111614
+INFO:root:Inserted service 4 with correct price 55844
+INFO:root:Inserted service 5 with correct price 78152
+INFO:root:Trigger adjusted price for service 4from 10000 to 55844
+INFO:root:Trigger adjusted price for service 3from 10000 to 113788
+INFO:root:Inserted service 1 with correct price 11395
+INFO:root:Trigger adjusted price for service 3from 10000 to 113788
+INFO:root:Inserted service 5 with correct price 78152
+INFO:root:Inserted service 2 with correct price 33536
+INFO:root:Inserted service 1 with correct price 11228
+INFO:root:Inserted service 1 with correct price 11395
+INFO:root:Trigger adjusted price for service 3from 10000 to 113788
+INFO:root:Inserted service 1 with correct price 11228
+INFO:root:Trigger adjusted price for service 3from 10000 to 111614
+INFO:root:Inserted service 4 with correct price 55844
+INFO:root:Inserted service 3 with correct price 111614
+INFO:root:Inserted service 2 with correct price 34149
+INFO:root:Trigger adjusted price for service 1from 10000 to 11395
+INFO:root:Inserted service 5 with correct price 79657
+INFO:root:Trigger adjusted price for service 5from 10000 to 78152
+INFO:root:Inserted service 1 with correct price 11228
+INFO:root:Inserted service 2 with correct price 33536
+INFO:root:Trigger adjusted price for service 5from 10000 to 78152
+INFO:root:Trigger adjusted price for service 2from 10000 to 33536
+INFO:root:Trigger adjusted price for service 1from 10000 to 11395
+INFO:root:Inserted service 6 with correct price 40993
+INFO:root:Trigger adjusted price for service 2from 10000 to 34149
+INFO:root:Trigger adjusted price for service 1from 10000 to 11395
+INFO:root:Inserted service 4 with correct price 55844
+INFO:root:Inserted service 5 with correct price 79657
+INFO:root:Inserted service 1 with correct price 11395
+INFO:root:Trigger adjusted price for service 2from 10000 to 34149
+INFO:root:
+Created payment bundle 1 for client 34 (wrong_total=False)
+INFO:root:Inserted payment document 1 amount=34167
+INFO:root:Inserted income payment document 1 total_amount=34167
+INFO:root:
+Created payment bundle 2 for client 11 (wrong_total=True)
+INFO:root:Inserted payment document 2 amount=39020
+INFO:root:Inserted income payment document 2 total_amount=303996
+INFO:root:
+Created payment bundle 3 for client 33 (wrong_total=False)
+INFO:root:Inserted payment document 3 amount=204897
+INFO:root:Inserted income payment document 3 total_amount=204897
+INFO:root:
+Created payment bundle 4 for client 16 (wrong_total=False)
+INFO:root:Inserted payment document 4 amount=52529
+INFO:root:Inserted income payment document 4 total_amount=52529
+INFO:root:
+Created payment bundle 5 for client 5 (wrong_total=False)
+INFO:root:Inserted payment document 5 amount=117040
+INFO:root:Inserted income payment document 5 total_amount=117040
+INFO:root:
+Created payment bundle 6 for client 6 (wrong_total=True)
+INFO:root:Inserted payment document 6 amount=55697
+INFO:root:Inserted income payment document 6 total_amount=352775
+INFO:root:
+Created payment bundle 7 for client 18 (wrong_total=False)
+INFO:root:Inserted payment document 7 amount=47746
+INFO:root:Inserted income payment document 7 total_amount=47746
+INFO:root:
+Created payment bundle 8 for client 16 (wrong_total=False)
+INFO:root:Inserted payment document 8 amount=35920
+INFO:root:Inserted income payment document 8 total_amount=35920
+INFO:root:
+Created payment bundle 9 for client 36 (wrong_total=True)
+INFO:root:Inserted payment document 9 amount=11395
+INFO:root:Inserted income payment document 9 total_amount=342788
+INFO:root:
+Created payment bundle 10 for client 4 (wrong_total=False)
+INFO:root:Inserted payment document 10 amount=31834
+INFO:root:Inserted income payment document 10 total_amount=31834
+INFO:root:
+Created payment bundle 11 for client 15 (wrong_total=False)
+INFO:root:Inserted payment document 11 amount=106140
+INFO:root:Inserted income payment document 11 total_amount=106140
+INFO:root:
+Created payment bundle 12 for client 22 (wrong_total=True)
+INFO:root:Inserted payment document 12 amount=145944
+INFO:root:Inserted income payment document 12 total_amount=1332328
+INFO:root:
+Created payment bundle 13 for client 29 (wrong_total=True)
+INFO:root:Inserted payment document 13 amount=34404
+INFO:root:Inserted income payment document 13 total_amount=105929
+INFO:root:
+Created payment bundle 14 for client 17 (wrong_total=True)
+INFO:root:Inserted payment document 14 amount=160740
+INFO:root:Inserted income payment document 14 total_amount=724721
+INFO:root:
+Created payment bundle 15 for client 28 (wrong_total=False)
+INFO:root:Inserted payment document 15 amount=61282
+INFO:root:Inserted income payment document 15 total_amount=61282
+INFO:root:
+Created payment bundle 16 for client 42 (wrong_total=False)
+INFO:root:Inserted payment document 16 amount=122842
+INFO:root:Inserted income payment document 16 total_amount=122842
+INFO:root:
+Created payment bundle 17 for client 36 (wrong_total=True)
+INFO:root:Inserted payment document 17 amount=75160
+INFO:root:Inserted income payment document 17 total_amount=374429
+INFO:root:
+Created payment bundle 18 for client 23 (wrong_total=True)
+INFO:root:Inserted payment document 18 amount=145944
+INFO:root:Inserted income payment document 18 total_amount=607256
+INFO:root:
+Created payment bundle 19 for client 28 (wrong_total=False)
+INFO:root:Inserted payment document 19 amount=101548
+INFO:root:Inserted income payment document 19 total_amount=101548
+INFO:root:
+Created payment bundle 20 for client 12 (wrong_total=False)
+INFO:root:Inserted payment document 20 amount=36607
+INFO:root:Inserted income payment document 20 total_amount=36607
+INFO:root:
+Created payment bundle 21 for client 28 (wrong_total=True)
+INFO:root:Inserted payment document 21 amount=157559
+INFO:root:Inserted income payment document 21 total_amount=508560
+INFO:root:
+Created payment bundle 22 for client 23 (wrong_total=False)
+INFO:root:Inserted payment document 22 amount=31526
+INFO:root:Inserted income payment document 22 total_amount=31526
+INFO:root:
+Created payment bundle 23 for client 3 (wrong_total=True)
+INFO:root:Inserted payment document 23 amount=70260
+INFO:root:Inserted payment document 24 amount=71634
+INFO:root:Inserted income payment document 23 total_amount=1360565
+INFO:root:
+Created payment bundle 24 for client 17 (wrong_total=False)
+INFO:root:Inserted payment document 25 amount=147996
+INFO:root:Inserted income payment document 24 total_amount=147996
+INFO:root:
+Created payment bundle 25 for client 3 (wrong_total=False)
+INFO:root:Inserted payment document 26 amount=79565
+INFO:root:Inserted income payment document 25 total_amount=79565
+INFO:root:
+Created payment bundle 26 for client 34 (wrong_total=True)
+INFO:root:Inserted payment document 27 amount=86518
+INFO:root:Inserted income payment document 26 total_amount=516362
+INFO:root:
+Created payment bundle 27 for client 37 (wrong_total=False)
+INFO:root:Inserted payment document 28 amount=79657
+INFO:root:Inserted income payment document 27 total_amount=79657
+INFO:root:
+Created payment bundle 28 for client 40 (wrong_total=False)
+INFO:root:Inserted payment document 29 amount=174225
+INFO:root:Inserted income payment document 28 total_amount=174225
+INFO:root:
+Created payment bundle 29 for client 2 (wrong_total=False)
+INFO:root:Inserted payment document 30 amount=76392
+INFO:root:Inserted income payment document 29 total_amount=76392
+INFO:root:
+Created payment bundle 30 for client 33 (wrong_total=False)
+INFO:root:Inserted payment document 31 amount=204897
+INFO:root:Inserted income payment document 30 total_amount=204897
+INFO:root:
+Created payment bundle 31 for client 31 (wrong_total=True)
+INFO:root:Inserted payment document 32 amount=192565
+INFO:root:Inserted income payment document 31 total_amount=1389470
+INFO:root:
+Created payment bundle 32 for client 26 (wrong_total=True)
+INFO:root:Inserted payment document 33 amount=85842
+INFO:root:Inserted income payment document 32 total_amount=929984
+INFO:root:
+Created payment bundle 33 for client 31 (wrong_total=True)
+INFO:root:Inserted payment document 34 amount=31515
+INFO:root:Inserted income payment document 33 total_amount=1354423
+INFO:root:
+Created payment bundle 34 for client 12 (wrong_total=False)
+INFO:root:Inserted payment document 35 amount=117060
+INFO:root:Inserted income payment document 34 total_amount=117060
+INFO:root:
+Created payment bundle 35 for client 36 (wrong_total=False)
+INFO:root:Inserted payment document 36 amount=147937
+INFO:root:Inserted income payment document 35 total_amount=147937
+INFO:root:
+Created payment bundle 36 for client 20 (wrong_total=False)
+INFO:root:Inserted payment document 37 amount=52519
+INFO:root:Inserted income payment document 36 total_amount=52519
+INFO:root:
+Created payment bundle 37 for client 19 (wrong_total=True)
+INFO:root:Inserted payment document 38 amount=116172
+INFO:root:Inserted income payment document 37 total_amount=462046
+INFO:root:
+Created payment bundle 38 for client 16 (wrong_total=False)
+INFO:root:Inserted payment document 39 amount=135262
+INFO:root:Inserted income payment document 38 total_amount=135262
+INFO:root:
+Created payment bundle 39 for client 12 (wrong_total=True)
+INFO:root:Inserted payment document 40 amount=76392
+INFO:root:Inserted income payment document 39 total_amount=521230
+INFO:root:
+Created payment bundle 40 for client 25 (wrong_total=False)
+INFO:root:Inserted payment document 41 amount=43779
+INFO:root:Inserted income payment document 40 total_amount=43779
+INFO:root:
+Created payment bundle 41 for client 16 (wrong_total=True)
+INFO:root:Inserted payment document 42 amount=31844
+INFO:root:Inserted income payment document 41 total_amount=862914
+INFO:root:
+Created payment bundle 42 for client 22 (wrong_total=True)
+INFO:root:Inserted payment document 43 amount=171726
+INFO:root:Inserted income payment document 42 total_amount=866018
+INFO:root:
+Created payment bundle 43 for client 14 (wrong_total=False)
+INFO:root:Inserted payment document 44 amount=129540
+INFO:root:Inserted income payment document 43 total_amount=129540
+INFO:root:
+Created payment bundle 44 for client 9 (wrong_total=False)
+INFO:root:Inserted payment document 45 amount=76392
+INFO:root:Inserted income payment document 44 total_amount=76392
+INFO:root:
+Created payment bundle 45 for client 16 (wrong_total=True)
+INFO:root:Inserted payment document 46 amount=159135
+INFO:root:Inserted income payment document 45 total_amount=434377
+INFO:root:
+Created payment bundle 46 for client 1 (wrong_total=False)
+INFO:root:Inserted payment document 47 amount=63668
+INFO:root:Inserted income payment document 46 total_amount=63668
+INFO:root:
+Created payment bundle 47 for client 41 (wrong_total=True)
+INFO:root:Inserted payment document 48 amount=167458
+INFO:root:Inserted income payment document 47 total_amount=415086
+INFO:root:
+Created payment bundle 48 for client 10 (wrong_total=False)
+INFO:root:Inserted payment document 49 amount=59340
+INFO:root:Inserted income payment document 48 total_amount=59340
+INFO:root:
+Created payment bundle 49 for client 5 (wrong_total=False)
+INFO:root:Inserted payment document 50 amount=108211
+INFO:root:Inserted income payment document 49 total_amount=108211
+INFO:root:
+Created payment bundle 50 for client 36 (wrong_total=False)
+INFO:root:Inserted payment document 51 amount=56903
+INFO:root:Inserted income payment document 50 total_amount=56903
+INFO:root:
+Created payment bundle 51 for client 5 (wrong_total=True)
+INFO:root:Inserted payment document 52 amount=156060
+INFO:root:Inserted income payment document 51 total_amount=322310
+INFO:root:
+Created payment bundle 52 for client 17 (wrong_total=True)
+INFO:root:Inserted payment document 53 amount=82720
+INFO:root:Inserted income payment document 52 total_amount=1025210
+INFO:root:
+Created payment bundle 53 for client 42 (wrong_total=False)
+INFO:root:Inserted payment document 54 amount=113788
+INFO:root:Inserted income payment document 53 total_amount=113788
+INFO:root:
+Created payment bundle 54 for client 39 (wrong_total=False)
+INFO:root:Inserted payment document 55 amount=177534
+INFO:root:Inserted income payment document 54 total_amount=177534
+INFO:root:
+Created payment bundle 55 for client 5 (wrong_total=True)
+INFO:root:Inserted payment document 56 amount=63658
+INFO:root:Inserted income payment document 55 total_amount=725999
+INFO:root:
+Created payment bundle 56 for client 11 (wrong_total=True)
+INFO:root:Inserted payment document 57 amount=108211
+INFO:root:Inserted income payment document 56 total_amount=844056
+INFO:root:
+Created payment bundle 57 for client 4 (wrong_total=True)
+INFO:root:Inserted payment document 58 amount=119370
+INFO:root:Inserted income payment document 57 total_amount=468949
+INFO:root:
+Created payment bundle 58 for client 36 (wrong_total=False)
+INFO:root:Inserted payment document 59 amount=11228
+INFO:root:Inserted income payment document 58 total_amount=11228
+INFO:root:
+Created payment bundle 59 for client 25 (wrong_total=True)
+INFO:root:Inserted payment document 60 amount=87526
+INFO:root:Inserted income payment document 59 total_amount=1044495
+INFO:root:
+Created payment bundle 60 for client 16 (wrong_total=False)
+INFO:root:Inserted payment document 61 amount=78020
+INFO:root:Inserted income payment document 60 total_amount=78020
+INFO:root:
+Created payment bundle 61 for client 28 (wrong_total=True)
+INFO:root:Inserted payment document 62 amount=61271
+INFO:root:Inserted income payment document 61 total_amount=96235
+INFO:root:
+Created payment bundle 62 for client 8 (wrong_total=False)
+INFO:root:Inserted payment document 63 amount=7961
+INFO:root:Inserted income payment document 62 total_amount=7961
+INFO:root:
+Created payment bundle 63 for client 37 (wrong_total=True)
+INFO:root:Inserted payment document 64 amount=229995
+INFO:root:Inserted income payment document 63 total_amount=210475
+INFO:root:
+Created payment bundle 64 for client 37 (wrong_total=True)
+INFO:root:Inserted payment document 65 amount=193445
+INFO:root:Inserted income payment document 64 total_amount=637158
+INFO:root:
+Created payment bundle 65 for client 9 (wrong_total=True)
+INFO:root:Inserted payment document 66 amount=76392
+INFO:root:Inserted income payment document 65 total_amount=1346558
+INFO:root:
+Created payment bundle 66 for client 5 (wrong_total=False)
+INFO:root:Inserted payment document 67 amount=63658
+INFO:root:Inserted income payment document 66 total_amount=63658
+INFO:root:
+Created payment bundle 67 for client 33 (wrong_total=False)
+INFO:root:Inserted payment document 68 amount=166214
+INFO:root:Inserted income payment document 67 total_amount=166214
+INFO:root:
+Created payment bundle 68 for client 33 (wrong_total=False)
+INFO:root:Inserted payment document 69 amount=11395
+INFO:root:Inserted income payment document 68 total_amount=11395
+INFO:root:
+Created payment bundle 69 for client 8 (wrong_total=True)
+INFO:root:Inserted payment document 70 amount=35920
+INFO:root:Inserted income payment document 69 total_amount=537939
+INFO:root:
+Created payment bundle 70 for client 34 (wrong_total=True)
+INFO:root:Inserted payment document 71 amount=34149
+INFO:root:Inserted income payment document 70 total_amount=605515
+INFO:root:
+Created payment bundle 71 for client 16 (wrong_total=True)
+INFO:root:Inserted payment document 72 amount=129540
+INFO:root:Inserted income payment document 71 total_amount=723697
+INFO:root:
+Created payment bundle 72 for client 9 (wrong_total=False)
+INFO:root:Inserted payment document 73 amount=140460
+INFO:root:Inserted income payment document 72 total_amount=140460
+INFO:root:
+Created payment bundle 73 for client 25 (wrong_total=False)
+INFO:root:Inserted payment document 74 amount=84045
+INFO:root:Inserted income payment document 73 total_amount=84045
+INFO:root:
+Created payment bundle 74 for client 40 (wrong_total=True)
+INFO:root:Inserted payment document 75 amount=122916
+INFO:root:Inserted income payment document 74 total_amount=28278
+INFO:root:
+Created payment bundle 75 for client 29 (wrong_total=True)
+INFO:root:Inserted payment document 76 amount=26275
+INFO:root:Inserted income payment document 75 total_amount=298274
+INFO:root:
+Created payment bundle 76 for client 23 (wrong_total=True)
+INFO:root:Inserted payment document 77 amount=77346
+INFO:root:Inserted income payment document 76 total_amount=26626
+INFO:root:
+Created payment bundle 77 for client 19 (wrong_total=False)
+INFO:root:Inserted payment document 78 amount=51520
+INFO:root:Inserted income payment document 77 total_amount=51520
+INFO:root:
+Created payment bundle 78 for client 2 (wrong_total=True)
+INFO:root:Inserted payment document 79 amount=35920
+INFO:root:Inserted income payment document 78 total_amount=212344
+INFO:root:
+Created payment bundle 79 for client 6 (wrong_total=True)
+INFO:root:Inserted payment document 80 amount=148011
+INFO:root:Inserted income payment document 79 total_amount=20371
+INFO:root:
+Created payment bundle 80 for client 30 (wrong_total=True)
+INFO:root:Inserted payment document 81 amount=128784
+INFO:root:Inserted payment document 82 amount=65334
+INFO:root:Inserted payment document 83 amount=43768
+INFO:root:Inserted income payment document 80 total_amount=1306550
+INFO:root:
+Created payment bundle 81 for client 13 (wrong_total=True)
+INFO:root:Inserted payment document 84 amount=84343
+INFO:root:Inserted income payment document 81 total_amount=1401852
+INFO:root:
+Created payment bundle 82 for client 17 (wrong_total=False)
+INFO:root:Inserted payment document 85 amount=7961
+INFO:root:Inserted income payment document 82 total_amount=7961
+INFO:root:
+Created payment bundle 83 for client 3 (wrong_total=True)
+INFO:root:Inserted payment document 86 amount=108221
+INFO:root:Inserted income payment document 83 total_amount=705519
+INFO:root:
+Created payment bundle 84 for client 44 (wrong_total=True)
+INFO:root:Inserted payment document 87 amount=122916
+INFO:root:Inserted income payment document 84 total_amount=530884
+INFO:root:
+Created payment bundle 85 for client 4 (wrong_total=False)
+INFO:root:Inserted payment document 88 amount=147996
+INFO:root:Inserted income payment document 85 total_amount=147996
+INFO:root:
+Created payment bundle 86 for client 39 (wrong_total=False)
+INFO:root:Inserted payment document 89 amount=79657
+INFO:root:Inserted income payment document 86 total_amount=79657
+INFO:root:
+Created payment bundle 87 for client 44 (wrong_total=True)
+INFO:root:Inserted payment document 90 amount=55844
+INFO:root:Inserted income payment document 87 total_amount=361106
+INFO:root:
+Created payment bundle 88 for client 38 (wrong_total=True)
+INFO:root:Inserted payment document 91 amount=113806
+INFO:root:Inserted income payment document 88 total_amount=512797
+INFO:root:
+Created payment bundle 89 for client 3 (wrong_total=False)
+INFO:root:Inserted payment document 92 amount=79570
+INFO:root:Inserted income payment document 89 total_amount=79570
+INFO:root:
+Created payment bundle 90 for client 19 (wrong_total=True)
+INFO:root:Inserted payment document 93 amount=60480
+INFO:root:Inserted income payment document 90 total_amount=1231552
+INFO:root:
+Created payment bundle 91 for client 4 (wrong_total=False)
+INFO:root:Inserted payment document 94 amount=7966
+INFO:root:Inserted income payment document 91 total_amount=7966
+INFO:root:
+Created payment bundle 92 for client 32 (wrong_total=True)
+INFO:root:Inserted payment document 95 amount=101580
+INFO:root:Inserted income payment document 92 total_amount=1494839
+INFO:root:
+Created payment bundle 93 for client 37 (wrong_total=True)
+INFO:root:Inserted payment document 96 amount=51457
+INFO:root:Inserted income payment document 93 total_amount=188842
+INFO:root:
+Created payment bundle 94 for client 18 (wrong_total=True)
+INFO:root:Inserted payment document 97 amount=63658
+INFO:root:Inserted income payment document 94 total_amount=113484
+INFO:root:
+Created payment bundle 95 for client 18 (wrong_total=True)
+INFO:root:Inserted payment document 98 amount=39785
+INFO:root:Inserted income payment document 95 total_amount=490457
+INFO:root:
+Created payment bundle 96 for client 14 (wrong_total=True)
+INFO:root:Inserted payment document 99 amount=87536
+INFO:root:Inserted income payment document 96 total_amount=117638
+INFO:root:
+Created payment bundle 97 for client 31 (wrong_total=False)
+INFO:root:Inserted payment document 100 amount=30930
+INFO:root:Inserted income payment document 97 total_amount=30930
+INFO:root:
+Created payment bundle 98 for client 4 (wrong_total=True)
+INFO:root:Inserted payment document 101 amount=171660
+INFO:root:Inserted income payment document 98 total_amount=87344
+INFO:root:
+Created payment bundle 99 for client 28 (wrong_total=True)
+INFO:root:Inserted payment document 102 amount=116772
+INFO:root:Inserted income payment document 99 total_amount=31832
+INFO:root:
+Created payment bundle 100 for client 38 (wrong_total=False)
+INFO:root:Inserted payment document 103 amount=204897
+INFO:root:Inserted income payment document 100 total_amount=204897
+INFO:root:
+Created payment bundle 101 for client 14 (wrong_total=True)
+INFO:root:Inserted payment document 104 amount=28651
+INFO:root:Inserted income payment document 101 total_amount=1373030
+INFO:root:
+Created payment bundle 102 for client 18 (wrong_total=True)
+INFO:root:Inserted payment document 105 amount=62440
+INFO:root:Inserted income payment document 102 total_amount=1348661
+INFO:root:
+Created payment bundle 103 for client 27 (wrong_total=True)
+INFO:root:Inserted payment document 106 amount=87536
+INFO:root:Inserted income payment document 103 total_amount=113561
+INFO:root:
+Created payment bundle 104 for client 41 (wrong_total=True)
+INFO:root:Inserted payment document 107 amount=56903
+INFO:root:Inserted income payment document 104 total_amount=322922
+INFO:root:
+Created payment bundle 105 for client 26 (wrong_total=True)
+INFO:root:Inserted payment document 108 amount=94464
+INFO:root:Inserted income payment document 105 total_amount=606048
+INFO:root:
+Created payment bundle 106 for client 25 (wrong_total=True)
+INFO:root:Inserted payment document 109 amount=42942
+INFO:root:Inserted income payment document 106 total_amount=780165
+INFO:root:
+Created payment bundle 107 for client 15 (wrong_total=True)
+INFO:root:Inserted payment document 110 amount=39020
+INFO:root:Inserted income payment document 107 total_amount=1022331
+INFO:root:
+Created payment bundle 108 for client 30 (wrong_total=True)
+INFO:root:Inserted payment document 111 amount=133974
+INFO:root:Inserted income payment document 108 total_amount=1286355
+INFO:root:
+Created payment bundle 109 for client 30 (wrong_total=True)
+INFO:root:Inserted payment document 112 amount=70033
+INFO:root:Inserted income payment document 109 total_amount=319310
+INFO:root:
+Created payment bundle 110 for client 16 (wrong_total=False)
+INFO:root:Inserted payment document 113 amount=129540
+INFO:root:Inserted income payment document 110 total_amount=129540
+INFO:root:
+Created payment bundle 111 for client 30 (wrong_total=False)
+INFO:root:Inserted payment document 114 amount=91032
+INFO:root:Inserted income payment document 111 total_amount=91032
+INFO:root:
+Created payment bundle 112 for client 3 (wrong_total=False)
+INFO:root:Inserted payment document 115 amount=143238
+INFO:root:Inserted income payment document 112 total_amount=143238
+INFO:root:
+Created payment bundle 113 for client 11 (wrong_total=False)
+INFO:root:Inserted payment document 116 amount=79570
+INFO:root:Inserted income payment document 113 total_amount=79570
+INFO:root:
+Created payment bundle 114 for client 19 (wrong_total=False)
+INFO:root:Inserted payment document 117 amount=79570
+INFO:root:Inserted payment document 118 amount=7961
+INFO:root:Inserted income payment document 114 total_amount=87531
+INFO:root:
+Created payment bundle 115 for client 32 (wrong_total=False)
+INFO:root:Inserted payment document 119 amount=61271
+INFO:root:Inserted income payment document 115 total_amount=61271
+INFO:root:
+Created payment bundle 116 for client 32 (wrong_total=False)
+INFO:root:Inserted payment document 120 amount=61282
+INFO:root:Inserted income payment document 116 total_amount=61282
+INFO:root:
+Created payment bundle 117 for client 2 (wrong_total=False)
+INFO:root:Inserted payment document 121 amount=7961
+INFO:root:Inserted income payment document 117 total_amount=7961
+INFO:root:
+Created payment bundle 118 for client 41 (wrong_total=True)
+INFO:root:Inserted payment document 122 amount=129609
+INFO:root:Inserted income payment document 118 total_amount=236363
+INFO:root:
+Created payment bundle 119 for client 17 (wrong_total=True)
+INFO:root:Inserted payment document 123 amount=54620
+INFO:root:Inserted income payment document 119 total_amount=651575
+INFO:root:
+Created payment bundle 120 for client 44 (wrong_total=False)
+INFO:root:Inserted payment document 124 amount=111688
+INFO:root:Inserted income payment document 120 total_amount=111688
+INFO:root:
+Created payment bundle 121 for client 39 (wrong_total=False)
+INFO:root:Inserted payment document 125 amount=234419
+INFO:root:Inserted income payment document 121 total_amount=234419
+INFO:root:
+Created payment bundle 122 for client 3 (wrong_total=True)
+INFO:root:Inserted payment document 126 amount=63658
+INFO:root:Inserted income payment document 122 total_amount=1456313
+INFO:root:
+Created payment bundle 123 for client 9 (wrong_total=True)
+INFO:root:Inserted payment document 127 amount=79565
+INFO:root:Inserted income payment document 123 total_amount=348884
+INFO:root:
+Created payment bundle 124 for client 8 (wrong_total=False)
+INFO:root:Inserted payment document 128 amount=46840
+INFO:root:Inserted income payment document 124 total_amount=46840
+INFO:root:
+Created payment bundle 125 for client 21 (wrong_total=False)
+INFO:root:Inserted payment document 129 amount=66542
+INFO:root:Inserted income payment document 125 total_amount=66542
+INFO:root:
+Created payment bundle 126 for client 29 (wrong_total=False)
+INFO:root:Inserted payment document 130 amount=92786
+INFO:root:Inserted income payment document 126 total_amount=92786
+INFO:root:
+Created payment bundle 127 for client 37 (wrong_total=True)
+INFO:root:Inserted payment document 131 amount=159332
+INFO:root:Inserted income payment document 127 total_amount=731496
+INFO:root:
+Created payment bundle 128 for client 23 (wrong_total=False)
+INFO:root:Inserted payment document 132 amount=25782
+INFO:root:Inserted income payment document 128 total_amount=25782
+INFO:root:
+Created payment bundle 129 for client 11 (wrong_total=False)
+INFO:root:Inserted payment document 133 amount=55702
+INFO:root:Inserted income payment document 129 total_amount=55702
+INFO:root:
+Created payment bundle 130 for client 44 (wrong_total=False)
+INFO:root:Inserted payment document 134 amount=34149
+INFO:root:Inserted income payment document 130 total_amount=34149
+INFO:root:
+Created payment bundle 131 for client 8 (wrong_total=True)
+INFO:root:Inserted payment document 135 amount=7961
+INFO:root:Inserted income payment document 131 total_amount=1402029
+INFO:root:
+Created payment bundle 132 for client 29 (wrong_total=False)
+INFO:root:Inserted payment document 136 amount=122553
+INFO:root:Inserted income payment document 132 total_amount=122553
+INFO:root:
+Created payment bundle 133 for client 32 (wrong_total=True)
+INFO:root:Inserted payment document 137 amount=31515
+INFO:root:Inserted income payment document 133 total_amount=1312132
+INFO:root:
+Created payment bundle 134 for client 34 (wrong_total=True)
+INFO:root:Inserted payment document 138 amount=34149
+INFO:root:Inserted income payment document 134 total_amount=103286
+INFO:root:
+Created payment bundle 135 for client 22 (wrong_total=False)
+INFO:root:Inserted payment document 139 amount=188886
+INFO:root:Inserted income payment document 135 total_amount=188886
+INFO:root:
+Created payment bundle 136 for client 5 (wrong_total=False)
+INFO:root:Inserted payment document 140 amount=119350
+INFO:root:Inserted income payment document 136 total_amount=119350
+INFO:root:
+Created payment bundle 137 for client 22 (wrong_total=True)
+INFO:root:Inserted payment document 141 amount=180312
+INFO:root:Inserted income payment document 137 total_amount=1005352
+INFO:root:
+Created payment bundle 138 for client 3 (wrong_total=False)
+INFO:root:Inserted payment document 142 amount=28646
+INFO:root:Inserted income payment document 138 total_amount=28646
+INFO:root:
+Created payment bundle 139 for client 16 (wrong_total=True)
+INFO:root:Inserted payment document 143 amount=87531
+INFO:root:Inserted income payment document 139 total_amount=986975
+INFO:root:
+Created payment bundle 140 for client 2 (wrong_total=False)
+INFO:root:Inserted payment document 144 amount=163923
+INFO:root:Inserted income payment document 140 total_amount=163923
+INFO:root:
+Created payment bundle 141 for client 15 (wrong_total=False)
+INFO:root:Inserted payment document 145 amount=62440
+INFO:root:Inserted income payment document 141 total_amount=62440
+INFO:root:
+Created payment bundle 142 for client 41 (wrong_total=False)
+INFO:root:Inserted payment document 146 amount=113788
+INFO:root:Inserted income payment document 142 total_amount=113788
+INFO:root:
+Created payment bundle 143 for client 19 (wrong_total=False)
+INFO:root:Inserted payment document 147 amount=7820
+INFO:root:Inserted income payment document 143 total_amount=7820
+INFO:root:
+Created payment bundle 144 for client 14 (wrong_total=True)
+INFO:root:Inserted payment document 148 amount=23420
+INFO:root:Inserted income payment document 144 total_amount=1333696
+INFO:root:
+Created payment bundle 145 for client 40 (wrong_total=True)
+INFO:root:Inserted payment document 149 amount=170730
+INFO:root:Inserted income payment document 145 total_amount=961593
+INFO:root:
+Created payment bundle 146 for client 40 (wrong_total=False)
+INFO:root:Inserted payment document 150 amount=100608
+INFO:root:Inserted income payment document 146 total_amount=100608
+INFO:root:
+Created payment bundle 147 for client 18 (wrong_total=True)
+INFO:root:Inserted payment document 151 amount=39020
+INFO:root:Inserted income payment document 147 total_amount=913049
+INFO:root:
+Created payment bundle 148 for client 15 (wrong_total=False)
+INFO:root:Inserted payment document 152 amount=147996
+INFO:root:Inserted income payment document 148 total_amount=147996
+INFO:root:
+Created payment bundle 149 for client 37 (wrong_total=False)
+INFO:root:Inserted payment document 153 amount=56903
+INFO:root:Inserted income payment document 149 total_amount=56903
+INFO:root:
+Created payment bundle 150 for client 13 (wrong_total=False)
+INFO:root:Inserted payment document 154 amount=92304
+INFO:root:Inserted income payment document 150 total_amount=92304
+INFO:root:
+Created payment bundle 151 for client 11 (wrong_total=False)
+INFO:root:Inserted payment document 155 amount=39020
+INFO:root:Inserted income payment document 151 total_amount=39020
+INFO:root:
+Created payment bundle 152 for client 3 (wrong_total=False)
+INFO:root:Inserted payment document 156 amount=28646
+INFO:root:Inserted income payment document 152 total_amount=28646
+INFO:root:
+Created payment bundle 153 for client 5 (wrong_total=False)
+INFO:root:Inserted payment document 157 amount=55702
+INFO:root:Inserted income payment document 153 total_amount=55702
+INFO:root:
+Created payment bundle 154 for client 2 (wrong_total=True)
+INFO:root:Inserted payment document 158 amount=70260
+INFO:root:Inserted income payment document 154 total_amount=323279
+INFO:root:
+Created payment bundle 155 for client 27 (wrong_total=True)
+INFO:root:Inserted payment document 159 amount=119083
+INFO:root:Inserted income payment document 155 total_amount=672211
+INFO:root:
+Created payment bundle 156 for client 14 (wrong_total=True)
+INFO:root:Inserted payment document 160 amount=55702
+INFO:root:Inserted income payment document 156 total_amount=1331265
+INFO:root:
+Created payment bundle 157 for client 44 (wrong_total=True)
+INFO:root:Inserted payment document 161 amount=11395
+INFO:root:Inserted income payment document 157 total_amount=975128
+INFO:root:
+Created payment bundle 158 for client 25 (wrong_total=True)
+INFO:root:Inserted payment document 162 amount=82494
+INFO:root:Inserted income payment document 158 total_amount=389230
+INFO:root:
+Created payment bundle 159 for client 41 (wrong_total=True)
+INFO:root:Inserted payment document 163 amount=133996
+INFO:root:Inserted income payment document 159 total_amount=349174
+INFO:root:
+Created payment bundle 160 for client 19 (wrong_total=True)
+INFO:root:Inserted payment document 164 amount=23873
+INFO:root:Inserted income payment document 160 total_amount=1473444
+INFO:root:
+Created payment bundle 161 for client 31 (wrong_total=True)
+INFO:root:Inserted payment document 165 amount=136554
+INFO:root:Inserted income payment document 161 total_amount=592608
+INFO:root:
+Created payment bundle 162 for client 30 (wrong_total=False)
+INFO:root:Inserted payment document 166 amount=8622
+INFO:root:Inserted income payment document 162 total_amount=8622
+INFO:root:
+Created payment bundle 163 for client 29 (wrong_total=False)
+INFO:root:Inserted payment document 167 amount=101548
+INFO:root:Inserted income payment document 163 total_amount=101548
+INFO:root:
+Created payment bundle 164 for client 40 (wrong_total=False)
+INFO:root:Inserted payment document 168 amount=133996
+INFO:root:Inserted income payment document 164 total_amount=133996
+INFO:root:
+Created payment bundle 165 for client 30 (wrong_total=False)
+INFO:root:Inserted payment document 169 amount=85842
+INFO:root:Inserted income payment document 165 total_amount=85842
+INFO:root:
+Created payment bundle 166 for client 39 (wrong_total=True)
+INFO:root:Inserted payment document 170 amount=120669
+INFO:root:Inserted income payment document 166 total_amount=975672
+INFO:root:
+Created payment bundle 167 for client 35 (wrong_total=False)
+INFO:root:Inserted payment document 171 amount=122916
+INFO:root:Inserted income payment document 167 total_amount=122916
+INFO:root:
+Created payment bundle 168 for client 5 (wrong_total=True)
+INFO:root:Inserted payment document 172 amount=111399
+INFO:root:Inserted income payment document 168 total_amount=231670
+INFO:root:
+Created payment bundle 169 for client 36 (wrong_total=False)
+INFO:root:Inserted payment document 173 amount=86573
+INFO:root:Inserted income payment document 169 total_amount=86573
+INFO:root:
+Created payment bundle 170 for client 31 (wrong_total=True)
+INFO:root:Inserted payment document 174 amount=26275
+INFO:root:Inserted income payment document 170 total_amount=173564
+INFO:root:
+Created payment bundle 171 for client 39 (wrong_total=False)
+INFO:root:Inserted payment document 175 amount=33536
+INFO:root:Inserted income payment document 171 total_amount=33536
+INFO:root:
+Created payment bundle 172 for client 42 (wrong_total=False)
+INFO:root:Inserted payment document 176 amount=11395
+INFO:root:Inserted income payment document 172 total_amount=11395
+INFO:root:
+Created payment bundle 173 for client 20 (wrong_total=True)
+INFO:root:Inserted payment document 177 amount=84343
+INFO:root:Inserted income payment document 173 total_amount=96203
+INFO:root:
+Created payment bundle 174 for client 44 (wrong_total=False)
+INFO:root:Inserted payment document 178 amount=125201
+INFO:root:Inserted income payment document 174 total_amount=125201
+INFO:root:
+Created payment bundle 175 for client 36 (wrong_total=False)
+INFO:root:Inserted payment document 179 amount=34167
+INFO:root:Inserted income payment document 175 total_amount=34167
+INFO:root:
+Created payment bundle 176 for client 28 (wrong_total=False)
+INFO:root:Inserted payment document 180 amount=87537
+INFO:root:Inserted income payment document 176 total_amount=87537
+INFO:root:
+Created payment bundle 177 for client 1 (wrong_total=False)
+INFO:root:Inserted payment document 181 amount=95482
+INFO:root:Inserted income payment document 177 total_amount=95482
+INFO:root:
+Created payment bundle 178 for client 38 (wrong_total=True)
+INFO:root:Inserted payment document 182 amount=193445
+INFO:root:Inserted income payment document 178 total_amount=1044999
+INFO:root:
+Created payment bundle 179 for client 18 (wrong_total=True)
+INFO:root:Inserted payment document 183 amount=143223
+INFO:root:Inserted income payment document 179 total_amount=704695
+INFO:root:
+Created payment bundle 180 for client 44 (wrong_total=True)
+INFO:root:Inserted payment document 184 amount=11395
+INFO:root:Inserted income payment document 180 total_amount=637528
+INFO:root:
+Created payment bundle 181 for client 35 (wrong_total=False)
+INFO:root:Inserted payment document 185 amount=56903
+INFO:root:Inserted income payment document 181 total_amount=56903
+INFO:root:
+Created payment bundle 182 for client 19 (wrong_total=True)
+INFO:root:Inserted payment document 186 amount=28100
+INFO:root:Inserted income payment document 182 total_amount=189820
+INFO:root:
+Created payment bundle 183 for client 13 (wrong_total=True)
+INFO:root:Inserted payment document 187 amount=54620
+INFO:root:Inserted income payment document 183 total_amount=133627
+INFO:root:
+Created payment bundle 184 for client 8 (wrong_total=False)
+INFO:root:Inserted payment document 188 amount=124143
+INFO:root:Inserted income payment document 184 total_amount=124143
+INFO:root:
+Created payment bundle 185 for client 42 (wrong_total=True)
+INFO:root:Inserted payment document 189 amount=122916
+INFO:root:Inserted income payment document 185 total_amount=551602
+INFO:root:
+Created payment bundle 186 for client 23 (wrong_total=True)
+INFO:root:Inserted payment document 190 amount=180312
+INFO:root:Inserted income payment document 186 total_amount=1135030
+INFO:root:
+Created payment bundle 187 for client 40 (wrong_total=False)
+INFO:root:Inserted payment document 191 amount=113788
+INFO:root:Inserted income payment document 187 total_amount=113788
+INFO:root:
+Created payment bundle 188 for client 12 (wrong_total=True)
+INFO:root:Inserted payment document 192 amount=74940
+INFO:root:Inserted income payment document 188 total_amount=526918
+INFO:root:
+Created payment bundle 189 for client 6 (wrong_total=False)
+INFO:root:Inserted payment document 193 amount=63658
+INFO:root:Inserted income payment document 189 total_amount=63658
+INFO:root:
+Created payment bundle 190 for client 38 (wrong_total=False)
+INFO:root:Inserted payment document 194 amount=167532
+INFO:root:Inserted income payment document 190 total_amount=167532
+INFO:root:
+Created payment bundle 191 for client 15 (wrong_total=True)
+INFO:root:Inserted payment document 195 amount=55697
+INFO:root:Inserted income payment document 191 total_amount=410468
+INFO:root:
+Created payment bundle 192 for client 41 (wrong_total=True)
+INFO:root:Inserted payment document 196 amount=56922
+INFO:root:Inserted income payment document 192 total_amount=806779
+INFO:root:
+Created payment bundle 193 for client 32 (wrong_total=False)
+INFO:root:Inserted payment document 197 amount=85842
+INFO:root:Inserted income payment document 193 total_amount=85842
+INFO:root:
+Created payment bundle 194 for client 22 (wrong_total=False)
+INFO:root:Inserted payment document 198 amount=61282
+INFO:root:Inserted income payment document 194 total_amount=61282
+INFO:root:
+Created payment bundle 195 for client 19 (wrong_total=True)
+INFO:root:Inserted payment document 199 amount=39790
+INFO:root:Inserted income payment document 195 total_amount=788477
+INFO:root:
+Created payment bundle 196 for client 43 (wrong_total=True)
+INFO:root:Inserted payment document 200 amount=125201
+INFO:root:Inserted income payment document 196 total_amount=686550
+INFO:root:
+Created payment bundle 197 for client 29 (wrong_total=False)
+INFO:root:Inserted payment document 201 amount=31515
+INFO:root:Inserted income payment document 197 total_amount=31515
+INFO:root:
+Created payment bundle 198 for client 7 (wrong_total=False)
+INFO:root:Inserted payment document 202 amount=39785
+INFO:root:Inserted income payment document 198 total_amount=39785
+INFO:root:
+Created payment bundle 199 for client 14 (wrong_total=False)
+INFO:root:Inserted payment document 203 amount=135262
+INFO:root:Inserted income payment document 199 total_amount=135262
+INFO:root:
+Created payment bundle 200 for client 8 (wrong_total=False)
+INFO:root:Inserted payment document 204 amount=31834
+INFO:root:Inserted income payment document 200 total_amount=31834
+INFO:root:
+Created payment bundle 201 for client 40 (wrong_total=True)
+INFO:root:Inserted payment document 205 amount=11228
+INFO:root:Inserted income payment document 201 total_amount=739809
+INFO:root:
+Created payment bundle 202 for client 4 (wrong_total=False)
+INFO:root:Inserted payment document 206 amount=119360
+INFO:root:Inserted income payment document 202 total_amount=119360
+INFO:root:
+Created payment bundle 203 for client 13 (wrong_total=False)
+INFO:root:Inserted payment document 207 amount=93640
+INFO:root:Inserted income payment document 203 total_amount=93640
+INFO:root:
+Created payment bundle 204 for client 14 (wrong_total=True)
+INFO:root:Inserted payment document 208 amount=109260
+INFO:root:Inserted income payment document 204 total_amount=154021
+INFO:root:
+Created payment bundle 205 for client 32 (wrong_total=True)
+INFO:root:Inserted payment document 209 amount=103044
+INFO:root:Inserted income payment document 205 total_amount=1377380
+INFO:root:
+Created payment bundle 206 for client 15 (wrong_total=False)
+INFO:root:Inserted payment document 210 amount=124128
+INFO:root:Inserted income payment document 206 total_amount=124128
+INFO:root:
+Created payment bundle 207 for client 39 (wrong_total=True)
+INFO:root:Inserted payment document 211 amount=11395
+INFO:root:Inserted income payment document 207 total_amount=458348
+INFO:root:
+Created payment bundle 208 for client 15 (wrong_total=False)
+INFO:root:Inserted payment document 212 amount=111414
+INFO:root:Inserted income payment document 208 total_amount=111414
+INFO:root:
+Created payment bundle 209 for client 22 (wrong_total=True)
+INFO:root:Inserted payment document 213 amount=87526
+INFO:root:Inserted income payment document 209 total_amount=950278
+INFO:root:
+Created payment bundle 210 for client 2 (wrong_total=True)
+INFO:root:Inserted payment document 214 amount=124860
+INFO:root:Inserted income payment document 210 total_amount=1382407
+INFO:root:
+Created payment bundle 211 for client 19 (wrong_total=False)
+INFO:root:Inserted payment document 215 amount=28651
+INFO:root:Inserted income payment document 211 total_amount=28651
+INFO:root:
+Created payment bundle 212 for client 8 (wrong_total=True)
+INFO:root:Inserted payment document 216 amount=143223
+INFO:root:Inserted income payment document 212 total_amount=679345
+INFO:root:
+Created payment bundle 213 for client 18 (wrong_total=True)
+INFO:root:Inserted payment document 217 amount=143238
+INFO:root:Inserted income payment document 213 total_amount=1219354
+INFO:root:
+Created payment bundle 214 for client 31 (wrong_total=False)
+INFO:root:Inserted payment document 218 amount=148797
+INFO:root:Inserted income payment document 214 total_amount=148797
+INFO:root:
+Created payment bundle 215 for client 21 (wrong_total=False)
+INFO:root:Inserted payment document 219 amount=101548
+INFO:root:Inserted income payment document 215 total_amount=101548
+INFO:root:
+Created payment bundle 216 for client 21 (wrong_total=True)
+INFO:root:Inserted payment document 220 amount=111624
+INFO:root:Inserted income payment document 216 total_amount=734867
+INFO:root:
+Created payment bundle 217 for client 14 (wrong_total=False)
+INFO:root:Inserted payment document 221 amount=79580
+INFO:root:Inserted income payment document 217 total_amount=79580
+INFO:root:
+Created payment bundle 218 for client 21 (wrong_total=True)
+INFO:root:Inserted payment document 222 amount=61271
+INFO:root:Inserted income payment document 218 total_amount=512672
+INFO:root:
+Created payment bundle 219 for client 1 (wrong_total=False)
+INFO:root:Inserted payment document 223 amount=28646
+INFO:root:Inserted income payment document 219 total_amount=28646
+INFO:root:
+Created payment bundle 220 for client 39 (wrong_total=False)
+INFO:root:Inserted payment document 224 amount=166157
+INFO:root:Inserted income payment document 220 total_amount=166157
+INFO:root:
+Created payment bundle 221 for client 21 (wrong_total=False)
+INFO:root:Inserted payment document 225 amount=87536
+INFO:root:Inserted income payment document 221 total_amount=87536
+INFO:root:
+Created payment bundle 222 for client 16 (wrong_total=False)
+INFO:root:Inserted payment document 226 amount=76392
+INFO:root:Inserted income payment document 222 total_amount=76392
+INFO:root:
+Created payment bundle 223 for client 4 (wrong_total=False)
+INFO:root:Inserted payment document 227 amount=140460
+INFO:root:Inserted income payment document 223 total_amount=140460
+INFO:root:
+Created payment bundle 224 for client 43 (wrong_total=False)
+INFO:root:Inserted payment document 228 amount=167458
+INFO:root:Inserted income payment document 224 total_amount=167458
+INFO:root:
+Created payment bundle 225 for client 6 (wrong_total=False)
+INFO:root:Inserted payment document 229 amount=95482
+INFO:root:Inserted income payment document 225 total_amount=95482
+INFO:root:
+Created payment bundle 226 for client 5 (wrong_total=False)
+INFO:root:Inserted payment document 230 amount=111399
+INFO:root:Inserted income payment document 226 total_amount=111399
+INFO:root:
+Created payment bundle 227 for client 14 (wrong_total=False)
+INFO:root:Inserted payment document 231 amount=62440
+INFO:root:Inserted income payment document 227 total_amount=62440
+INFO:root:
+Created payment bundle 228 for client 1 (wrong_total=False)
+INFO:root:Inserted payment document 232 amount=156060
+INFO:root:Inserted income payment document 228 total_amount=156060
+INFO:root:
+Created payment bundle 229 for client 28 (wrong_total=True)
+INFO:root:Inserted payment document 233 amount=43779
+INFO:root:Inserted income payment document 229 total_amount=1317866
+INFO:root:
+Created payment bundle 230 for client 17 (wrong_total=True)
+INFO:root:Inserted payment document 234 amount=35920
+INFO:root:Inserted income payment document 230 total_amount=1444321
+INFO:root:
+Created payment bundle 231 for client 15 (wrong_total=False)
+INFO:root:Inserted payment document 235 amount=23873
+INFO:root:Inserted income payment document 231 total_amount=23873
+INFO:root:
+Created payment bundle 232 for client 3 (wrong_total=True)
+INFO:root:Inserted payment document 236 amount=159135
+INFO:root:Inserted income payment document 232 total_amount=499901
+INFO:root:
+Created payment bundle 233 for client 11 (wrong_total=True)
+INFO:root:Inserted payment document 237 amount=7820
+INFO:root:Inserted income payment document 233 total_amount=1199858
+INFO:root:
+Created payment bundle 234 for client 42 (wrong_total=False)
+INFO:root:Inserted payment document 238 amount=113788
+INFO:root:Inserted income payment document 234 total_amount=113788
+INFO:root:
+Created payment bundle 235 for client 28 (wrong_total=False)
+INFO:root:Inserted payment document 239 amount=87526
+INFO:root:Inserted income payment document 235 total_amount=87526
+INFO:root:
+Created payment bundle 236 for client 23 (wrong_total=True)
+INFO:root:Inserted payment document 240 amount=128784
+INFO:root:Inserted income payment document 236 total_amount=100211
+INFO:root:
+Created payment bundle 237 for client 2 (wrong_total=False)
+INFO:root:Inserted payment document 241 amount=23878
+INFO:root:Inserted income payment document 237 total_amount=23878
+INFO:root:
+Created payment bundle 238 for client 11 (wrong_total=True)
+INFO:root:Inserted payment document 242 amount=135262
+INFO:root:Inserted income payment document 238 total_amount=974321
+INFO:root:
+Created payment bundle 239 for client 26 (wrong_total=True)
+INFO:root:Inserted payment document 243 amount=25782
+INFO:root:Inserted income payment document 239 total_amount=340081
+INFO:root:
+Created payment bundle 240 for client 42 (wrong_total=True)
+INFO:root:Inserted payment document 244 amount=11395
+INFO:root:Inserted income payment document 240 total_amount=504491
+INFO:root:
+Created payment bundle 241 for client 32 (wrong_total=False)
+INFO:root:Inserted payment document 245 amount=180312
+INFO:root:Inserted income payment document 241 total_amount=180312
+INFO:root:
+Created payment bundle 242 for client 38 (wrong_total=True)
+INFO:root:Inserted payment document 246 amount=188911
+INFO:root:Inserted income payment document 242 total_amount=123952
+INFO:root:
+Created payment bundle 243 for client 4 (wrong_total=False)
+INFO:root:Inserted payment document 247 amount=46840
+INFO:root:Inserted income payment document 243 total_amount=46840
+INFO:root:
+Created payment bundle 244 for client 1 (wrong_total=True)
+INFO:root:Inserted payment document 248 amount=95482
+INFO:root:Inserted income payment document 244 total_amount=1194839
+INFO:root:
+Created payment bundle 245 for client 24 (wrong_total=False)
+INFO:root:Inserted payment document 249 amount=26265
+INFO:root:Inserted income payment document 245 total_amount=26265
+INFO:root:
+Created payment bundle 246 for client 4 (wrong_total=False)
+INFO:root:Inserted payment document 250 amount=132640
+INFO:root:Inserted income payment document 246 total_amount=132640
+INFO:root:
+Created payment bundle 247 for client 14 (wrong_total=False)
+INFO:root:Inserted payment document 251 amount=52519
+INFO:root:Inserted income payment document 247 total_amount=52519
+INFO:root:
+Created payment bundle 248 for client 44 (wrong_total=True)
+INFO:root:Inserted payment document 252 amount=40993
+INFO:root:Inserted income payment document 248 total_amount=291976
+INFO:root:
+Created payment bundle 249 for client 40 (wrong_total=False)
+INFO:root:Inserted payment document 253 amount=40974
+INFO:root:Inserted income payment document 249 total_amount=40974
+INFO:root:
+Created payment bundle 250 for client 2 (wrong_total=True)
+INFO:root:Inserted payment document 254 amount=163908
+INFO:root:Inserted income payment document 250 total_amount=339075
+INFO:root:Генерация тестовых данных завершена
+INFO:root:Подключение к БД закрыто

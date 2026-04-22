@@ -5,43 +5,44 @@
 Суммы, разложенные по документам равны сумме платежки.
 */
 
-CREATE OR REPLACE FUNCTION trg_check_amount()
-RETURNS TRIGGER
-LANGUAGE plpgsql
+CREATE OR REPLACE FUNCTION distribute_payment_bundle()
+RETURNS TRIGGER 
+ LANGUAGE plpgsql
 AS $$
-DECLARE 
-    c_type TEXT;
-    current_price BIGINT;
+DECLARE
+    remaining_amount BIGINT;
+    doc RECORD;
 BEGIN
-    SELECT client_type INTO c_type
-    FROM client 
-    WHERE id_client = NEW.id_client;
+    remaining_amount := NEW.total_amount;
+    FOR doc IN
+        SELECT *
+        FROM payment_document
+        WHERE cooperation_agreement_no = NEW.parent_cooperation_agreement_no
+          AND id_client = NEW.id_client
+          AND amount > 0
+        ORDER BY id_payment_document ASC
+    LOOP
+        IF remaining_amount <= 0 THEN
+            EXIT;
+        END IF;
+        IF remaining_amount >= doc.amount THEN
+            remaining_amount := remaining_amount - doc.amount;
+            UPDATE payment_document
+            SET amount = 0
+            WHERE id_payment_document = doc.id_payment_document;
+        ELSE
+            UPDATE payment_document
+            SET amount = amount - remaining_amount
+            WHERE id_payment_document = doc.id_payment_document;
+            remaining_amount := 0;
+            EXIT;
+        END IF;
+    END LOOP;
 
-    SELECT pls.price INTO current_price 
-    FROM price_list_service pls 
-    JOIN price_list pl ON pls.creation_date = pl.creation_date
-    WHERE pls.id_service = NEW.id_service AND 
-        pls.client_type = c_type AND
-        pl.creation_date = (
-            SELECT creation_price_list_date
-            FROM assignment_agreement
-            WHERE assignment_agreement_no = NEW.assignment_agreement_no AND 
-                  cooperation_agreement_no = NEW.cooperation_agreement_no AND 
-                  id_client = NEW.id_client
-        );
-
-    IF NOT FOUND THEN
-        RAISE EXCEPTION 'No price found for client type % and service %', c_type, NEW.id_service;
-    END IF;
-    
-    IF NEW.price IS DISTINCT FROM current_price THEN 
-        NEW.price := current_price;
-    END IF;
     RETURN NEW;
 END;
 $$;
-
-CREATE TRIGGER check_amount
-BEFORE INSERT ON contract_service
+CREATE TRIGGER trigger_distribute_payment_bundle
+AFTER INSERT ON payment_bundle
 FOR EACH ROW
-EXECUTE FUNCTION trg_check_amount();
+EXECUTE FUNCTION distribute_payment_bundle();
