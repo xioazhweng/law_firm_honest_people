@@ -58,8 +58,8 @@ CREATE TABLE employee (
     employee_number BIGINT PRIMARY KEY,
     fio TEXT NOT NULL,
     id_job_position INT REFERENCES job_position(id_job_position) ON DELETE SET NULL,
-    account_no TEXT, 
-	bik VARCHAR(9),
+    account_no TEXT NOT NULL, 
+	bik VARCHAR(9) NOT NULL,
     birth_date DATE NOT NULL,
 	hire_date DATE NOT NULL,
 	fire_date DATE,
@@ -155,7 +155,7 @@ CREATE TABLE payment_bundle (
 
 CREATE TABLE payment_document (
     id_payment_document BIGSERIAL PRIMARY KEY,
-    id_payment_bundle BIGINT NOT NULL,
+    id_payment_bundle BIGINT,
 
     assignment_agreement_no BIGINT NOT NULL,
     cooperation_agreement_no BIGINT NOT NULL,
