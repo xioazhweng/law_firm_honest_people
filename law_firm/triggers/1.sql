@@ -45,7 +45,9 @@ BEGIN
     END IF;
     
     IF NEW.price IS DISTINCT FROM current_price THEN 
+        RAISE NOTICE 'check_price_for_client: Changed price from % to %', NEW.price, current_price;
         NEW.price := current_price;
+       
     END IF;
     RETURN NEW;
 END;

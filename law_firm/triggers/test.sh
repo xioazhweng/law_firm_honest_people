@@ -26,6 +26,6 @@ dropdb --if-exists "$DB_NAME"
 createdb "$DB_NAME"
 
 echo "Создаю таблицы и генерирую тестовые данные"
-"$PYTHON_BIN" "gen_db.py" --apply-schema
+"$PYTHON_BIN" "test.py" --apply-schema
 
 
