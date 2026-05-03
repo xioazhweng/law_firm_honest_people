@@ -35,7 +35,8 @@ services AS (
         ON cs.assignment_agreement_no = aa.assignment_agreement_no 
     LEFT JOIN price_list_service pls 
         ON cs.id_service = pls.id_service 
-        AND aa.creation_price_list_date = pls.creation_date
+        AND aa.creation_price_list_date = pls.creation_date 
+        AND pls.client_type = c.client_type
 ),
 payments AS (
     SELECT 
@@ -50,10 +51,13 @@ payments AS (
     LEFT JOIN assignment_agreement aa 
         ON aa.id_client = ca.id_client 
         AND aa.cooperation_agreement_no = ca.cooperation_agreement_no 
-    LEFT JOIN payment_transaction pt 
-        ON pt.id_client = c.id_client 
-    JOIN income_pay_document ipd 
-        ON pt.payment_no = ipd.payment_no
+    LEFT JOIN payment_document pd ON 
+        pd.id_client = aa.id_client AND 
+        pd.cooperation_agreement_no = aa.cooperation_agreement_no AND 
+        pd.assignment_agreement_no = aa.assignment_agreement_no
+    JOIN payment_bundle pb ON pb.id_payment_bundle = pd.id_payment_bundle
+    JOIN income_payment_bundle ipb ON ipb.id_payment_bundle = pb.id_payment_bundle
+    JOIN income_pay_document ipd ON ipd.id_income_pay_document = ipb.id_income_pay_document
 )
 SELECT  
     ci.name,
@@ -70,3 +74,4 @@ JOIN clients_info ci ON ci.id_client = s.id_client
 LEFT JOIN payments p ON p.id_client = ci.id_client
 GROUP BY ci.name, ci.id_client
 HAVING SUM(s.price) - SUM(p.amount) > 0; 
+

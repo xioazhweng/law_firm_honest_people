@@ -81,18 +81,18 @@ popular_service AS (
     WHERE rn = 1
 ),
 accounts AS (
-    SELECT pt.cooperation_agreement_no,
-	   c.id_client,
-		string_agg(pt.account_no::TEXT, ',' order by pt.account_no) as accounts_list
-    FROM client c
-    LEFT JOIN cooperation_agreement ca 
-        ON ca.id_client = c.id_client  
-    LEFT JOIN assignment_agreement aa 
-        ON ca.cooperation_agreement_no  = aa.cooperation_agreement_no 
-        AND ca.id_client = aa.id_client
-    LEFT JOIN payment_transaction pt 
-        ON pt.cooperation_agreement_no = ca.cooperation_agreement_no 
-    GROUP BY pt.cooperation_agreement_no, c.id_client
+    SELECT 
+        ca.id_client,
+        string_agg(DISTINCT ipd.account_no::text, ',') AS accounts_list
+    FROM cooperation_agreement ca
+    JOIN payment_bundle pb 
+        ON pb.parent_cooperation_agreement_no = ca.cooperation_agreement_no
+       AND pb.id_client = ca.id_client
+    JOIN income_payment_bundle ipb 
+        ON ipb.id_payment_bundle = pb.id_payment_bundle
+    JOIN income_pay_document ipd 
+        ON ipd.id_income_pay_document = ipb.id_income_pay_document
+    GROUP BY ca.id_client
 )
 SELECT 
     ci.name,

@@ -10,7 +10,7 @@ import os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from psycopg2.extras import execute_values
 from data_generation import GenLib
-
+from decimal import Decimal
 fake = Faker("ru_RU")
 
 DEFAULT_COUNTS = {
@@ -606,7 +606,7 @@ class DBFiller:
             """, (
                 account_no,
                 bik,
-                total,
+                int(total * Decimal(random.choice([1, 0.5, 0.8, 0.98, 1, 1, 1, 1, 1]))),
                 created_at + timedelta(days=random.randint(10, 15))
             ))
 
