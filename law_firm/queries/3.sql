@@ -32,7 +32,9 @@ services AS (
         ON aa.id_client = ca.id_client 
         AND aa.cooperation_agreement_no = ca.cooperation_agreement_no 
     LEFT JOIN contract_service cs 
-        ON cs.assignment_agreement_no = aa.assignment_agreement_no 
+        ON cs.cooperation_agreement_no = aa.cooperation_agreement_no AND
+         cs.id_client = aa.id_client AND
+         cs.assignment_agreement_no = aa.assignment_agreement_no 
     LEFT JOIN price_list_service pls 
         ON cs.id_service = pls.id_service 
         AND aa.creation_price_list_date = pls.creation_date 
@@ -74,4 +76,3 @@ JOIN clients_info ci ON ci.id_client = s.id_client
 LEFT JOIN payments p ON p.id_client = ci.id_client
 GROUP BY ci.name, ci.id_client
 HAVING SUM(s.price) - SUM(p.amount) > 0; 
-
