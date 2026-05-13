@@ -218,6 +218,10 @@ def demoSavepoint():
     B = BDConnection(db_config)
     cur = B.connect()
     cur.execute("BEGIN;")
+    cur.execute("DELETE FROM service WHERE name_service = 'TEST_1'")
+    cur.execute("COMMIT;")
+   
+    cur.execute("BEGIN;")
     cur.execute("""
         INSERT INTO service(name_service, price)
         VALUES ('TEST_1', 100);
@@ -232,8 +236,9 @@ def demoSavepoint():
 
     cur.execute("SELECT * FROM service WHERE name_service LIKE 'TEST%'")
     logging.info(cur.fetchall())
+    cur.execute("BEGIN;")
     cur.execute("DELETE FROM service WHERE name_service = 'TEST_1'")
-    B.commit()
+    cur.execute("COMMIT;")
     B.close()
     
 
