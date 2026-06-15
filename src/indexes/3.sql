@@ -10,18 +10,33 @@
 р/с с которого осуществлялся последний платеж, 
 сумма задолженности.
 */
---- 666ms
-DROP INDEX IF EXISTS idx_payment_document;
-DROP INDEX IF EXISTS idx_price_list_service;
-DROP INDEX IF EXISTS idx_contract_service;
-DROP INDEX IF EXISTS idx_assignment_client_agreement;
 
-CREATE INDEX idx_payment_document --сомнительно
-ON payment_document (id_client, cooperation_agreement_no, assignment_agreement_no);
+DROP INDEX IF EXISTS idx_payment_document; 
+CREATE INDEX idx_payment_document
+ON payment_document (id_client, cooperation_agreement_no, assignment_agreement_no);  
+
+/*
+DROP INDEX IF EXISTS idx_price_list_service;
+CREATE INDEX idx_price_list_service
+ON price_list_service (id_service, creation_date, client_type);
+*/
+
+
+DROP INDEX IF EXISTS idx_contract_service;
 CREATE INDEX idx_contract_service
-ON contract_service (id_client, cooperation_agreement_no, assignment_agreement_no); --сомнительно
+ON contract_service (id_client, cooperation_agreement_no, assignment_agreement_no);
+
+
+DROP INDEX IF EXISTS idx_assignment_client_agreement;
 CREATE INDEX idx_assignment_client_agreement 
 ON assignment_agreement (id_client, cooperation_agreement_no);
+
+
+DROP INDEX IF EXISTS idx_contract_service_cover_price;
+CREATE INDEX idx_contract_service_cover_price
+ON contract_service (id_client, cooperation_agreement_no, assignment_agreement_no)
+INCLUDE (id_service);
+
 
 EXPLAIN (ANALYZE, BUFFERS)
 WITH clients_info AS (
@@ -90,3 +105,8 @@ LEFT JOIN payments p ON p.id_client = ci.id_client
 GROUP BY ci.name, ci.id_client
 HAVING SUM(s.price) - SUM(p.amount) > 0; 
 
+DROP INDEX IF EXISTS idx_payment_document; 
+DROP INDEX IF EXISTS idx_price_list_service;
+DROP INDEX IF EXISTS idx_contract_service;
+DROP INDEX IF EXISTS idx_assignment_client_agreement;
+DROP INDEX IF EXISTS idx_contract_service_cover_price;

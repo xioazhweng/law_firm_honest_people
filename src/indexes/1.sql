@@ -12,24 +12,50 @@ id,
 список счетов пользователя через запятую.
 */
 
-
-DROP INDEX IF EXISTS idx_assignment_client_agreement;
-DROP INDEX IF EXISTS idx_contract_service_agreement;
+/*
+-- простой
 DROP INDEX IF EXISTS idx_income_pay_cover;
-DROP INDEX IF EXISTS idx_client;
-
-
 CREATE INDEX idx_income_pay_cover
-ON income_pay_document (payment_date);  -- Btree time index 215-200 to 200pm10
+ON income_pay_document (payment_date);  -- полезно для фильтров по дате платежа
+*/
+
+/*
+DROP INDEX IF EXISTS idx_client;
 CREATE INDEX idx_client 
-ON client (id_client, client_type); -- 215-200 to 200pm10
+ON client (id_client, client_type);  --  JOIN с таблицами client_*
+*/
 
+/* 
+DROP INDEX IF EXISTS idx_assignment_client_agreement;
 CREATE INDEX idx_assignment_client_agreement 
-ON assignment_agreement (id_client, cooperation_agreement_no); --around 195ms
+ON assignment_agreement (id_client, cooperation_agreement_no);  
+*/
 
+DROP INDEX IF EXISTS idx_contract_service_agreement;
 CREATE INDEX idx_contract_service_agreement
 ON contract_service (assignment_agreement_no, cooperation_agreement_no, id_client);
 
+DROP INDEX IF EXISTS idx_contract_service_full;
+CREATE INDEX idx_contract_service_full
+ON contract_service (id_client, cooperation_agreement_no, assignment_agreement_no, id_service);
+
+DROP INDEX IF EXISTS idx_assignment_agreement_client;
+CREATE INDEX idx_assignment_agreement_client
+ON assignment_agreement (id_client, cooperation_agreement_no, assignment_agreement_no);
+
+-- частичный индекс только для завершенных договоров (partial)
+DROP INDEX IF EXISTS idx_active_assignment_agreement;
+CREATE INDEX idx_active_assignment_agreement
+ON assignment_agreement (id_client, cooperation_agreement_no)
+WHERE completion_date IS NOT NULL;
+
+/*
+-- покрывающий индекс 
+DROP INDEX IF EXISTS idx_contract_service_cover;
+CREATE INDEX idx_contract_service_cover
+ON contract_service (id_client, cooperation_agreement_no, assignment_agreement_no)
+INCLUDE (id_service);
+*/
 
 EXPLAIN (ANALYZE, BUFFERS)
 WITH clients_info AS ( --idx_client
@@ -131,7 +157,10 @@ LEFT JOIN accounts acc ON ci.id_client = acc.id_client
 ORDER BY ci.name;
 
 
-DROP INDEX IF EXISTS idx_assignment_client_agreement;
-DROP INDEX IF EXISTS idx_contract_service_agreement;
 DROP INDEX IF EXISTS idx_income_pay_cover;
 DROP INDEX IF EXISTS idx_client;
+DROP INDEX IF EXISTS idx_assignment_client_agreement;
+DROP INDEX IF EXISTS idx_contract_service_agreement;
+DROP INDEX IF EXISTS idx_contract_service_full;
+DROP INDEX IF EXISTS idx_assignment_agreement_client;
+DROP INDEX IF EXISTS idx_active_assignment_agreement;

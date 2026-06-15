@@ -12,7 +12,7 @@ id,
 список счетов пользователя через запятую.
 */
 
-
+--EXPLAIN (ANALYZE, BUFFERS)
 WITH clients_info AS (
     SELECT 
         c.id_client,

@@ -14,11 +14,11 @@ from decimal import Decimal
 fake = Faker("ru_RU")
 
 DEFAULT_COUNTS = {
-    "employees": 1000,
-    "client_person": 200,
-    "client_entrepreneur": 1000,
-    "client_legal": 1200,
-    "banks": 50,
+    "employees": 100,
+    "client_person": 20,
+    "client_entrepreneur": 100,
+    "client_legal": 30,
+    "banks": 5,
 }
 
 JOB_POSITIONS = ["Юрист", "Менеджер", "Администратор", "Бухгалтер"]
@@ -166,8 +166,8 @@ class DBFiller:
         cursor.execute(f"TRUNCATE TABLE {', '.join(TRUNCATE_ORDER)} RESTART IDENTITY CASCADE;")
         logging.info("Таблицы очищены")
 
-    def insert_job_positions(self, cursor) -> dict[str, int]:
-        result: dict[str, int] = {}
+    def insert_job_positions(self, cursor):
+        result = {}
         for job_name in JOB_POSITIONS:
             cursor.execute(
                 """

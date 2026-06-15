@@ -8,7 +8,7 @@
 текущая задолженность перед сотрудником; 
 дата самой старой запланированной выплаты, по которой выплат не было или было выплачено не полностью.
 */
-
+--EXPLAIN (ANALYZE, BUFFERS)
 with current_year as (
         SELECT *
         FROM outgoing_pay_document opd

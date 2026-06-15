@@ -216,7 +216,7 @@ def main():
     logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
     args = build_parser().parse_args()
     base_dir = Path(__file__).resolve().parent.parent
-    schema_path = base_dir / "db" / "create_db.sql"
+    schema_path = base_dir / "create_db" / "create_db.sql"
     db_config = {
         "host": os.getenv("PGHOST", "127.0.0.1"),
         "port": int(os.getenv("PGPORT", "5432")),

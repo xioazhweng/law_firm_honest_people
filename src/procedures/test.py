@@ -129,7 +129,7 @@ class DBFillerTestProcedure(DBFiller):
 
 def build_parser():
     parser = argparse.ArgumentParser(description="Заполнение БД юридической фирмы тестовыми данными")
-    parser.add_argument("--apply-schema", action="store_true", help="Сначала выполнить SQL из db/create_db.sql")
+    parser.add_argument("--apply-schema", action="store_true", help="Сначала выполнить SQL из create_db/create_db.sql")
     parser.add_argument("--no-truncate", action="store_true", help="Не очищать таблицы перед заполнением")
     parser.add_argument("--employees", type=int, default=DEFAULT_COUNTS["employees"], help="Количество сотрудников")
     parser.add_argument("--persons", type=int, default=DEFAULT_COUNTS["client_person"], help="Количество клиентов-физлиц")
@@ -143,7 +143,7 @@ def main():
     logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
     args = build_parser().parse_args()
     base_dir = Path(__file__).resolve().parent.parent
-    schema_path = base_dir / "db" / "create_db.sql"
+    schema_path = base_dir / "create_db" / "create_db.sql"
     db_config = {
         "host": os.getenv("PGHOST", "127.0.0.1"),
         "port": int(os.getenv("PGPORT", "5432")),

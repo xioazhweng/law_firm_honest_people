@@ -10,7 +10,7 @@
 р/с с которого осуществлялся последний платеж, 
 сумма задолженности.
 */
-
+--EXPLAIN (ANALYZE, BUFFERS)
 WITH clients_info AS (
     SELECT 
         c.id_client,
